@@ -21,5 +21,15 @@ export class LoginComponent implements OnInit {
     return this.emailId.hasError('required')?'Email required':
     this.emailId.hasError('email')?'input format not proper':"";
   }
+  password = new FormControl('',[
+    Validators.required,
+    Validators.minLength(8),
+
+  ]);
+  getPasswordError(){
+    return this.password.hasError('required')?'Password required':
+    this.password.hasError('minlength')? 'Enter minimum 8 ':
+    ""
+  }
 
 }

@@ -1,6 +1,7 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
     <mat-card class="box">
         <mat-card-header>
+            <mat-card-title>Fundoo Notes</mat-card-title>
             <mat-card-title>Register</mat-card-title>
         </mat-card-header>
 
@@ -18,18 +19,14 @@
                 <mat-form-field class="example-full-width">
                     <input matInput placeholder="Password">
                 </mat-form-field>
-
                 <mat-form-field class="example-full-width">
-                    <mat-label>Choose a role...</mat-label>
-                    <mat-select [(value)]="selected">
-                        <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
-                        </mat-option>
-                    </mat-select>
+                    <input matInput placeholder="Mobile Number">
                 </mat-form-field>
 
             </mat-card-content>
 
-            <button mat-stroked-button color="accent" class="btn-block">Register</button>
+            <button mat-stroked-button color="accent" class="btn-block">Register</button><br><br>
+            <a href="/login" style="font-size: 20px;">Already Registered</a>
 
         </form>
     </mat-card>

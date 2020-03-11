@@ -2,8 +2,9 @@
 
     <mat-card class="box">
         <mat-card-header>
+
             <mat-card-title>Fundoo Notes</mat-card-title><br>
-            <mat-card-title>Log in</mat-card-title>
+            <mat-card-title>Login</mat-card-title>
         </mat-card-header>
 
         <form class="example-form">
@@ -13,12 +14,14 @@
                     <input matInput placeholder="Email" type="email" [formControl]="emailId">
                     <mat-error *ngIf="emailId.invalid">{{getEmailError()}}</mat-error>
                 </mat-form-field>
-
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Password">
+                    <input matInput placeholder="Password" type="password" [formControl]="password">
+                    <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
                 </mat-form-field>
             </mat-card-content>
-            <button mat-stroked-button color="accent" class="btn-block">Log in</button>
+            <button mat-stroked-button color="accent" class="btn-block">Log in</button><br><br>
+            <a href="/register" style="font-size: 20px;">New User?</a>&nbsp;&nbsp;<a routerLink="/forgotpassword" style="font-size: 20px;">Forgot Password</a>
+
         </form>
     </mat-card>
 
