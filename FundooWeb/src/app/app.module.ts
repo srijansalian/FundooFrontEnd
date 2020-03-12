@@ -25,12 +25,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './component/register/register.component';
 import { LoginComponent } from './component/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgotpasswordComponent } from './component/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
