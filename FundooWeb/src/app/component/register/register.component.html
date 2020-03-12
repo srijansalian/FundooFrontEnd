@@ -1,23 +1,27 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
     <mat-card class="box">
         <mat-card-header>
-            <mat-card-title>Fundoo Notes</mat-card-title>
-            <mat-card-title>Register</mat-card-title>
+            <mat-card-title class="title">Fundoo Notes</mat-card-title>
+            <mat-card-title class="subtitle">Register</mat-card-title>
         </mat-card-header>
 
         <form class="example-form">
 
             <mat-card-content>
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Username">
+                    <input matInput placeholder="UserName" type="text" [formControl]="UserName">
+                    <mat-error *ngIf="UserName.invalid">{{errorUserNameMessage()}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" type="email">
+                    <input matInput placeholder="Email" type="email" [formControl]="emailId">
+                    <mat-error *ngIf="emailId.invalid">{{getEmailError()}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Password" type="password">
+                    <input matInput placeholder="Password" type="password" [formControl]="password">
+                    <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                     <input matInput placeholder="MobileNumber" type="number" [formControl]="mobilenumber">
