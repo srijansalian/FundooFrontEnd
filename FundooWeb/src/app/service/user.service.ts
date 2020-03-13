@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaderResponse ,HttpHeaders} from '@angular/common/http
 import {HttpService} from './http.service';
 import { Observable, Subject } from 'rxjs';
 import {User} from './../model/user.model';
+import { Login } from '../model/login.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,11 @@ export class UserService {
   {
     return this.httpService.postRequest(this.userApiUrl+environment.registerURL,user,this.httpOtions);
   }
+  userLogin(login:Login)
+  {
+    return this.httpService.postRequest(this.userApiUrl+environment.loginURL,login,this.httpOtions);
+  }
+
 
   
 }

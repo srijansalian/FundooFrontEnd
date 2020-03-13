@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators,FormControl } from '@angular/forms';
+import { Validators,FormControl,FormGroup } from '@angular/forms';
+import { Login } from '../../model/login.model';
+import { UserService } from '../../service/user.service';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +11,12 @@ import { Validators,FormControl } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  login:Login=new Login();
+  loginForm:FormGroup;
 
-  constructor() { }
+  constructor(  private userService:UserService,
+    private snackBar:MatSnackBar,
+    private router:Router) { }
 
   ngOnInit()  {
   }
@@ -32,6 +40,32 @@ export class LoginComponent implements OnInit {
     ""
   }
 
-  
+  onSubmit(){
+    this.login.email=this.emailId.value;
+    this.login.password=this.password.value;
+
+    this.userService.userLogin(this.login).subscribe(
+      (response:any) =>{
+        console.log(response.statusMessage)
+         if(response.statusCode===200){
+          // console.log(response.headers.get("jwt-token"));
+           localStorage.setItem('jwt-token',response.token);
+           this.router.navigateByUrl('home');
+         
+         }else{
+
+           this.snackBar.open('Login Fail', "", {duration:3000})
+         }
+        
+      },
+      
+      (error:any)=> {
+       console.log(error.error.statusMessage)
+      }
+     );
+    
+  }
+
+
 
 }

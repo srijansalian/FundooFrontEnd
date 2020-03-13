@@ -4,6 +4,7 @@ export const environment = {
   userApiURL:'http://localhost:8080/users',
 
   registerURL:'/register',
+  loginURL:'/login',
 };
 
 
