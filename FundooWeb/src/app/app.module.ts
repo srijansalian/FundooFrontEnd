@@ -18,7 +18,8 @@ import {MatCardModule,
   MatChipsModule,
   MatTooltipModule,
   MatTableModule,
-  MatPaginatorModule} from '@angular/material';
+  MatPaginatorModule,
+  MatSnackBarModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,13 +27,13 @@ import { RegisterComponent } from './component/register/register.component';
 import { LoginComponent } from './component/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgotpasswordComponent } from './component/forgotpassword/forgotpassword.component';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +59,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
+    HttpClientModule,
+    MatSnackBarModule
+   
    
 
     
@@ -81,6 +85,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    
    
   ],
   providers: [],

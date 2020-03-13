@@ -1,12 +1,31 @@
 import { Injectable } from '@angular/core';
+import {environment} from 'src/environments/environment'
 import { HttpClient, HttpHeaderResponse ,HttpHeaders} from '@angular/common/http';
 import {HttpService} from './http.service';
+import { Observable, Subject } from 'rxjs';
 import {User} from './../model/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  private userApiUrl=environment.userApiURL;
 
-  constructor(private _http:HttpClient,private httpservice:HttpService) { }
+  private httpOtions={
+    headers: new HttpHeaders ({'content-type':'application/json'})
+    };
+
+  constructor( private httpService:HttpService) { }
+
+  // userRegistration(user:User):Observable<any>
+  // {
+  //   console.log("User Email",user.email);
+  //   return this.httpservice.postRequest(this.userApiUrl+environment.registerURL,user,this.httpOtions);
+  // }
+  userRegistration(user:User)
+  {
+    return this.httpService.postRequest(this.userApiUrl+environment.registerURL,user,this.httpOtions);
+  }
+
+  
 }

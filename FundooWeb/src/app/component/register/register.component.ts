@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators,FormGroup, FormBuilder} from '@angular/forms';
+import { User } from '../../model/user.model';
+import { MatSnackBar } from '@angular/material';
+import { TryCatchStmt } from '@angular/compiler';
+import { UserService } from '../../service/user.service';
+import { error } from 'util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,8 +13,12 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  user:User=new User();
 
-  constructor() { }
+  constructor(
+    private userService:UserService,
+    private snackBar:MatSnackBar,
+    private router:Router) { }
 
   ngOnInit() {
   }
@@ -23,25 +33,25 @@ export class RegisterComponent implements OnInit {
     this.mobilenumber.hasError('pattern')? "Enter 10 Digits":
     "";
    }
-   UserName = new FormControl('',[
+   name = new FormControl('',[
     Validators.required,
     Validators.pattern('[a-zA-Z]*')
   ]
   )
   errorUserNameMessage(){
-    return this.UserName.hasError('required')? "The Field Can't be Empty":
-    this.UserName.hasError('pattern')? "The Field must contain alphabet":
+    return this.name.hasError('required')? "The Field Can't be Empty":
+    this.name.hasError('pattern')? "The Field must contain alphabet":
     "";
    }
 
-   emailId = new FormControl('',[
+   email = new FormControl('',[
     Validators.required,
     Validators.email
   ]);
 
   getEmailError(){
-    return this.emailId.hasError('required')?'Email required':
-    this.emailId.hasError('email')?'input format not proper':"";
+    return this.email.hasError('required')?'Email required':
+    this.email.hasError('email')?'input format not proper':"";
   }
 
   password = new FormControl('',[
@@ -54,5 +64,48 @@ export class RegisterComponent implements OnInit {
     this.password.hasError('minlength')? 'Enter minimum 8 ':
     ""
   }
+  confirmPassword= new FormControl(null, 
+    [Validators.required,
+      Validators.minLength(8)
+    ]);
 
-}
+    getConfirmPasswordError(){
+      return this.password.hasError('required')?'Password required':
+      this.password.hasError('minlength')? 'Enter minimum 8 ':
+      ""
+    }
+
+    onSubmit(){
+      try{
+        if(this.password.value===this.confirmPassword.value){
+          this.user.password=this.password.value;
+          this.user.confirmpassword=this.confirmPassword.value;
+          this.user.name=this.name.value;
+          this.user.mobilenumber=this.mobilenumber.value;
+          this.user.email=this.email.value;
+
+          this.userService.userRegistration(this.user).subscribe(
+            (response:any) =>{
+              this.router.navigate(["/login"]);
+              this.snackBar.open(response.message, "Ok", {duration:3000})
+           },
+           error=> {
+             this.snackBar.open(error.error.message, "Registration Not Possiable", {duration:3000})
+           }
+          );
+        }else{
+          throw new error;
+
+        }
+        }catch(error){
+         this.snackBar.open("Confirm Password and Password mismatch", "", {duration:3000})
+
+          
+
+
+
+        }
+      }
+    }
+
+

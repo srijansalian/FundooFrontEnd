@@ -1,9 +1,9 @@
 export const environment = {
-  production: false,
+  production: true,
 
   userApiURL:'http://localhost:8080/users',
 
-  registerURL:'register',
+  registerURL:'/register',
 };
 
 

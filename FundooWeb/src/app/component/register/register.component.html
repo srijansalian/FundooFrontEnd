@@ -10,13 +10,13 @@
 
             <mat-card-content>
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="UserName" type="text" [formControl]="UserName">
-                    <mat-error *ngIf="UserName.invalid">{{errorUserNameMessage()}}</mat-error>
+                    <input matInput placeholder="UserName" type="text" [formControl]="name">
+                    <mat-error *ngIf="name.invalid">{{errorUserNameMessage()}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" type="email" [formControl]="emailId">
-                    <mat-error *ngIf="emailId.invalid">{{getEmailError()}}</mat-error>
+                    <input matInput placeholder="Email" type="email" [formControl]="email">
+                    <mat-error *ngIf="email.invalid">{{getEmailError()}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
@@ -24,13 +24,18 @@
                     <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Confirm Password" type="password" [formControl]="confirmPassword">
+                    <mat-error *ngIf="confirmPassword.invalid">{{getConfirmPasswordError()}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
                     <input matInput placeholder="MobileNumber" type="number" [formControl]="mobilenumber">
                     <mat-error *ngIf="mobilenumber.invalid">{{errorMobileNumberMessage()}}</mat-error>
                 </mat-form-field>
 
             </mat-card-content>
 
-            <button mat-stroked-button color="accent" class="btn-block">Register</button><br><br>
+            <button mat-stroked-button color="accent" class="btn-block" (click)="onSubmit()">Register</button><br><br>
             <a href="/login" style="font-size: 20px;">Already Registered</a>
 
         </form>
