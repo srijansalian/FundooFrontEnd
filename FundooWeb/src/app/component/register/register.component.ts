@@ -98,7 +98,7 @@ export class RegisterComponent implements OnInit {
 
         }
         }catch(error){
-         this.snackBar.open("Confirm Password and Password mismatch", "", {duration:3000})
+         this.snackBar.open("Please Enter the password anf confirm password", "", {duration:3000})
 
           
 
