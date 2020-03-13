@@ -5,6 +5,7 @@ export const environment = {
 
   registerURL:'/register',
   loginURL:'/login',
+  forgotpasswordURL:'/forgotpassword',  
 };
 
 

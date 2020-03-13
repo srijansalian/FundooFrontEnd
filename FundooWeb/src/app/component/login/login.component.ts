@@ -46,12 +46,12 @@ export class LoginComponent implements OnInit {
 
     this.userService.userLogin(this.login).subscribe(
       (response:any) =>{
-        console.log(response.statusMessage)
-         if(response.statusCode===200){
+        console.log(response.message)
+         if(response.statuscode===200){
           // console.log(response.headers.get("jwt-token"));
            localStorage.setItem('jwt-token',response.token);
-           this.router.navigateByUrl('home');
-         
+          //  this.router.navigateByUrl('home');
+          this.router.navigate(["/register"]);
          }else{
 
            this.snackBar.open('Login Fail', "", {duration:3000})

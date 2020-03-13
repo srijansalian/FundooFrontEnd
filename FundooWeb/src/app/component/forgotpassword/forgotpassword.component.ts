@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators,FormControl } from '@angular/forms';
+import { Forgotpassword } from '../../model/forgotpassword.model';
+import { UserService } from '../../service/user.service'
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-forgotpassword',
@@ -8,7 +11,10 @@ import { Validators,FormControl } from '@angular/forms';
 })
 export class ForgotpasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor( private userService:UserService,
+    private snackBar:MatSnackBar) { }
+
+    forgotPassword:Forgotpassword=new Forgotpassword();
 
   ngOnInit() {
   }
@@ -22,6 +28,21 @@ export class ForgotpasswordComponent implements OnInit {
     this.emailId.hasError('email')?'input format not proper':"";
   }
 
+ 
+    onSubmit(){
+      this.forgotPassword.email=this.emailId.value;
+      
+    
+      this.userService.userForgotPassword(this.forgotPassword).subscribe(  
+        (response:any) =>{
+         console.log("hello")
+         },
+        error=> {
+          console.log("error")
+        }
+      );
+    
+      }
   
 
 }

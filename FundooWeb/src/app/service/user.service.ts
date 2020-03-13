@@ -5,6 +5,7 @@ import {HttpService} from './http.service';
 import { Observable, Subject } from 'rxjs';
 import {User} from './../model/user.model';
 import { Login } from '../model/login.model';
+import { Forgotpassword } from '../model/forgotpassword.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,11 @@ export class UserService {
   userLogin(login:Login)
   {
     return this.httpService.postRequest(this.userApiUrl+environment.loginURL,login,this.httpOtions);
+  }
+  userForgotPassword(forgotP:Forgotpassword)
+  {
+    
+    return this.httpService.postRequest(this.userApiUrl+environment.forgotpasswordURL,forgotP,this.httpOtions);
   }
 
 
