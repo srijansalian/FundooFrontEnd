@@ -7,6 +7,7 @@ export const environment = {
   loginURL:'/login',
   forgotpasswordURL:'/forgotpassword',  
   setpassword:'/resetpassword/',
+  
 };
 
 
