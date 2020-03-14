@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         console.log(response.message)
          if(response.statuscode===200){
           // console.log(response.headers.get("jwt-token"));
-           localStorage.setItem('jwt-token',response.token);
+           localStorage.setItem('token',response.token);
           //  this.router.navigateByUrl('home');
           this.router.navigate(["/register"]);
          }else{

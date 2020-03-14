@@ -36,6 +36,7 @@ export class ForgotpasswordComponent implements OnInit {
       this.userService.userForgotPassword(this.forgotPassword).subscribe(  
         (response:any) =>{
          console.log("hello")
+         localStorage.setItem('token',response.token);
          },
         error=> {
           console.log("error")

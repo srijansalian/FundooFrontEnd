@@ -6,6 +6,7 @@ import { Observable, Subject } from 'rxjs';
 import {User} from './../model/user.model';
 import { Login } from '../model/login.model';
 import { Forgotpassword } from '../model/forgotpassword.model';
+import { Setpassword } from '../model/setpassword.model';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,11 @@ export class UserService {
   {
     
     return this.httpService.postRequest(this.userApiUrl+environment.forgotpasswordURL,forgotP,this.httpOtions);
+  }
+  userSetPassword(setP:Setpassword,token:string)
+  {
+    console.log("set password",setP)
+    return this.httpService.putRequest(this.userApiUrl+environment.setpassword+token,setP,{headers:new HttpHeaders().get(localStorage.token)});
   }
 
 

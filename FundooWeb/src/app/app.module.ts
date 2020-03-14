@@ -28,12 +28,14 @@ import { LoginComponent } from './component/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgotpasswordComponent } from './component/forgotpassword/forgotpassword.component';
 import { HttpClient, HttpHeaders,HttpClientModule } from '@angular/common/http';
+import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     ForgotpasswordComponent,
+    ResetpasswordComponent,
   ],
   imports: [
     BrowserModule,
