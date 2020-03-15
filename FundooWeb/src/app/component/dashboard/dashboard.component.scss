@@ -1,25 +1,35 @@
-.search-hero {
-    max-width: 500px;
-    padding-bottom: 50px;
-    margin: auto;
-}
-
-.sidenav {
-    width: 20%;
-}
-
-.searchButton {
-    border: 1px solid lightgray;
-    border-radius: 7px;
-    width: 650px;
-    margin-right: 60px;
-    outline: none;
-    margin-left: 7%;
-}
-
-.searchData {
-    border: none;
-    height: 40px;
-    width: 93%;
-    margin-left: -0%;
-}
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .search-hero {
+        max-width: 500px;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+    
+    .sidenav {
+        width: 20%;
+    }
+    
+    .searchButton {
+        border: 1px solid lightgray;
+        border-radius: 7px;
+        width: 650px;
+        margin-right: 60px;
+        outline: none;
+        margin-left: 12%;
+    }
+    
+    .searchData {
+        border: none;
+        height: 40px;
+        width: 93%;
+        margin-left: -0%;
+    }
+    
+    .apps {
+        margin-left: 60%;
+        color: #5f6368;
+    }
