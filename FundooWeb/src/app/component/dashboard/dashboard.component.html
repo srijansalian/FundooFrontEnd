@@ -2,9 +2,34 @@
     <mat-toolbar>
         <mat-toolbar-row>
             <span>
-              <button mat-icon-button (click)="drawer.toggle()" class="menu">
+              <button  mat-icon-button (click)="sidenav.toggle()" class="menu">
+
                 <mat-icon>menu</mat-icon>
               </button>
             </span>
+            <img class="image" src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/48/keep-icon.png" />
+            <span class="keep">Fundoo</span>
+            <div class="searchButton">
+                <button mat-icon-button class="search">
+                <mat-icon>search</mat-icon>
+              </button>
+                <input class="searchData" placeholder="Search">
+            </div>
         </mat-toolbar-row>
     </mat-toolbar>
+</div>
+<div class="sidenav">
+    <mat-sidenav-container style="width:100%; height: 100%; display: flex;">
+        <mat-sidenav #sidenav mode="side">
+            <li>
+                <h3>
+                    Hello
+                </h3>
+            </li>
+        </mat-sidenav>
+        <mat-sidenav-content style="background-color: whitesmoke; width: 100%; align-content: center;">
+            <span>Contents</span>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
