@@ -1,43 +1,44 @@
-<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<div class="reg">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title class="title">Fundoo Notes </mat-card-title>
+                <mat-card-title class="subtitle">Register</mat-card-title>
+            </mat-card-header>
 
-    <mat-card class="box">
-        <mat-card-header>
-            <mat-card-title class="title">Fundoo Notes </mat-card-title>
-            <mat-card-title class="subtitle">Register</mat-card-title>
-        </mat-card-header>
+            <form class="example-form">
 
-        <form class="example-form">
+                <mat-card-content>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="UserName" type="text" [formControl]="name">
+                        <mat-error *ngIf="name.invalid">{{errorUserNameMessage()}}</mat-error>
+                    </mat-form-field>
 
-            <mat-card-content>
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="UserName" type="text" [formControl]="name">
-                    <mat-error *ngIf="name.invalid">{{errorUserNameMessage()}}</mat-error>
-                </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Email" type="email" [formControl]="email">
+                        <mat-error *ngIf="email.invalid">{{getEmailError()}}</mat-error>
+                    </mat-form-field>
 
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" type="email" [formControl]="email">
-                    <mat-error *ngIf="email.invalid">{{getEmailError()}}</mat-error>
-                </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" type="password" [formControl]="password">
+                        <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Confirm Password" type="password" [formControl]="confirmPassword">
+                        <mat-error *ngIf="confirmPassword.invalid">{{getConfirmPasswordError()}}</mat-error>
+                    </mat-form-field>
 
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Password" type="password" [formControl]="password">
-                    <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Confirm Password" type="password" [formControl]="confirmPassword">
-                    <mat-error *ngIf="confirmPassword.invalid">{{getConfirmPasswordError()}}</mat-error>
-                </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="MobileNumber" type="number" [formControl]="mobilenumber">
+                        <mat-error *ngIf="mobilenumber.invalid">{{errorMobileNumberMessage()}}</mat-error>
+                    </mat-form-field>
 
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="MobileNumber" type="number" [formControl]="mobilenumber">
-                    <mat-error *ngIf="mobilenumber.invalid">{{errorMobileNumberMessage()}}</mat-error>
-                </mat-form-field>
+                </mat-card-content>
 
-            </mat-card-content>
+                <button mat-stroked-button color="accent" class="btn-block" (click)="onSubmit()">Register</button><br><br>
+                <a href="/login" style="font-size: 20px;">Already Registered</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button mat-raised-button color="primary" type="reset" value="reset">Reset</button>
 
-            <button mat-stroked-button color="accent" class="btn-block" (click)="onSubmit()">Register</button><br><br>
-            <a href="/login" style="font-size: 20px;">Already Registered</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button mat-raised-button color="primary" type="reset" value="reset">Reset</button>
-
-        </form>
-    </mat-card>
+            </form>
+        </mat-card>
+    </div>
 </div>

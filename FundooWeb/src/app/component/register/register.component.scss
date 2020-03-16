@@ -5,6 +5,11 @@ body {
     padding: 0;
 }
 
+.reg {
+    display: flex;
+    flex-direction: column;
+}
+
 .login-wrapper {
     background-image: url(../../../assets/Images/doodles.png);
     height: 100%;
