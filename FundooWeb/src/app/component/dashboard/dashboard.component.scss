@@ -3,16 +3,14 @@
         flex-direction: column;
     }
     
-    .search-hero {
-        max-width: 500px;
-        padding-bottom: 50px;
-        margin: auto;
-    }
-    
-    .sidenav {
-        width: 20%;
-    }
-    
+    // .search-hero {
+    //     max-width: 500px;
+    //     padding-bottom: 50px;
+    //     margin: auto;
+    // }
+    // .sidenav {
+    //     width: 20%;  
+    // }
     .searchButton {
         border: 1px solid lightgray;
         border-radius: 7px;
@@ -32,4 +30,59 @@
     .apps {
         margin-left: 60%;
         color: #5f6368;
+    }
+    
+    .matSidenav {
+        //color: rgba(0, 0, 0, 0.63);
+        font-size: smaller;
+        font-family: monospace;
+        width: 20%;
+        height: 100%;
+        padding: 20px;
+        // background-color: blue;
+    }
+    
+    // mat-sidenav {
+    //     width: 20%;
+    // }
+    .sideContent {
+        justify-content: center;
+        padding: 20%;
+        // overflow: hidden;
+        //background-color: rgb(109, 62, 62);
+        width: 70%;
+        align-content: center;
+    }
+    
+    .mat-raised-button {
+        background-color: white;
+        box-shadow: none;
+        padding: 0 20px;
+        line-height: 45px;
+    }
+    
+    .navbutton {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .navbutton:hover {
+        margin-bottom: 10px;
+        background-color: lightgrey;
+    }
+    
+    .sidenavIcon {
+        margin-right: 1em;
+    }
+    
+    .buttonhover:hover {
+        background-color: lightgrey;
+    }
+    
+    .label {
+        margin-bottom: 10px;
+    }
+    
+    .divider {
+        margin: 10px 0 10px 0;
     }
