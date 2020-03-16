@@ -1,82 +1,88 @@
 <div class="dashboard">
-    <mat-toolbar>
-        <mat-toolbar-row>
-            <span>
-              <button  mat-icon-button (click)="sidenav.toggle()" class="menu">
+    <div>
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <span>
+            <button  mat-icon-button (click)="sidenav.toggle()" class="menu">
 
-                <mat-icon>menu</mat-icon>
-              </button>
-            </span>
-            <img class="image" src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/48/keep-icon.png" />
-            <span class="keep">Fundoo</span>
-            <div class="searchButton">
-                <button mat-icon-button class="search">
-                <mat-icon>search</mat-icon>
-              </button>
-                <input class="searchData" placeholder="Search">
-                <!-- <button mat-icon-button class=" clear">
-                  <mat-icon>clear</mat-icon>
-                  </button> -->
-            </div>
-            <div>
-                <button mat-icon-button class="buttonhover">
-                <mat-icon >refresh</mat-icon>
-              </button>
-            </div>
-            <div><button mat-icon-button class="buttonhover">
-              <mat-icon >grid_view</mat-icon>
-            </button></div>
-            <div><button mat-icon-button class="buttonhover">
-              <mat-icon >settings</mat-icon>
-            </button></div>
-            <div><button mat-icon-button class="buttonhover">
-              <mat-icon >apps</mat-icon>
-            </button></div>
+              <mat-icon>menu</mat-icon>
+            </button>
+          </span>
+                <img class="image" src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/48/keep-icon.png" />
+                <span class="keep">Fundoo</span>
+                <div class="searchButton">
+                    <button mat-icon-button class="search">
+              <mat-icon>search</mat-icon>
+            </button>
+                    <input class="searchData" placeholder="Search">
+                    <!-- <button mat-icon-button class=" clear">
+                <mat-icon>clear</mat-icon>
+                </button> -->
+                </div>
+                <div>
+                    <button mat-icon-button class="buttonhover">
+              <mat-icon >refresh</mat-icon>
+            </button>
+                </div>
+                <div><button mat-icon-button class="buttonhover">
+            <mat-icon >grid_view</mat-icon>
+          </button></div>
+                <div><button mat-icon-button class="buttonhover">
+            <mat-icon >settings</mat-icon>
+          </button></div>
+                <div><button mat-icon-button class="buttonhover">
+            <mat-icon >apps</mat-icon>
+          </button></div>
 
-        </mat-toolbar-row>
-    </mat-toolbar>
-
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
     <div class="sidenavContainer">
-        <mat-sidenav-container>
+        <mat-sidenav-container class="sidenavContainer1">
             <mat-sidenav class="matSidenav" #sidenav mode="side">
-                <div>
+
+                <div class="navdiv1">
                     <button mat-raised-button class="navbutton">
-                  <mat-icon class ="sidenavIcon">lightbulb_outline</mat-icon>
-                  <span>Notes</span>
-                </button>
-                </div>
-                <div>
+                      <mat-icon class ="sidenavIcon">lightbulb_outline</mat-icon>
+                       <span class= "iconcenter">Notes</span>
+                       </button>
+
                     <button mat-raised-button class="navbutton">
-                    <mat-icon class ="sidenavIcon">notifications</mat-icon>
-                    <span>Reminders</span>
-                  </button>
+                      <mat-icon class ="sidenavIcon">notifications</mat-icon>
+                        <span class="iconcenter">Reminders</span>
+                       </button>
 
                 </div>
                 <mat-divider class="divider"></mat-divider>
-                <span class="label">LABELS</span>
                 <div>
-                    <button mat-raised-button class="navbutton">
-                    <mat-icon class ="sidenavIcon">create</mat-icon>
-                    <span>Edit labels</span>
-                  </button>
+                    <span class="label">LABELS</span>
+                    <div>
+                        <button mat-raised-button class="navbutton">
+                            <mat-icon class ="sidenavIcon">create</mat-icon>
+                           <span class="iconcenter">Edit labels</span>
+                           </button>
+                    </div>
                 </div>
                 <mat-divider class="divider"></mat-divider>
+
                 <div>
                     <button mat-raised-button class="navbutton">
-                  <mat-icon class ="sidenavIcon">archive</mat-icon>
-                  <span>Archive</span>
-                </button>
+                       <mat-icon class ="sidenavIcon">archive</mat-icon>
+                       <span class="iconcenter">Archive</span>
+                      </button>
                 </div>
                 <div>
                     <button mat-raised-button class="navbutton">
-                <mat-icon class ="sidenavIcon">delete</mat-icon>
-                <span>Trash</span>
-              </button>
+                      <mat-icon class ="sidenavIcon">delete</mat-icon>
+                      <span class= "iconcenter">Trash</span>
+                      </button>
                 </div>
             </mat-sidenav>
+
             <mat-sidenav-content class="sideContent">
-                <span>Contents</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Id quas, eveniet enim non eligendi possimus quo debitis est! Magni odit totam facilis pariatur dignissimos quasi repellendus sequi illum?</p>
             </mat-sidenav-content>
+
         </mat-sidenav-container>
     </div>
 

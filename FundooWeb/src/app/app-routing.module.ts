@@ -8,6 +8,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 
 
+
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'forgotpassword',component:ForgotpasswordComponent},
   {path:'resetpassword/:token',component:ResetpasswordComponent},
   {path:'dashboard',component:DashboardComponent},
+ 
   
 ];
 

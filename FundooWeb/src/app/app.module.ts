@@ -31,6 +31,7 @@ import { HttpClient, HttpHeaders,HttpClientModule } from '@angular/common/http';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     ForgotpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
+
    
   ],
   imports: [
