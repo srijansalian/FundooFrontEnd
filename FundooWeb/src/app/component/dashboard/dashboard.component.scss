@@ -41,6 +41,8 @@
         width: 20%;
         height: 100%;
         //padding: 20px;
+        border: none;
+        border-color: whitesmoke;
     }
     
     .sideContent {
@@ -95,12 +97,15 @@
         height: 100%;
         width: 100%;
         overflow: auto;
+        border: none;
+        border-color: whitesmoke;
     }
     
     .sidenavContainer1 {
         height: 100%;
         width: 100%;
         display: flex;
+        border-color: whitesmoke;
     }
     
     .matSidenav {

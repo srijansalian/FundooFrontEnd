@@ -1,19 +1,18 @@
-<div class="main" fxFlex>
-    <mat-card style="height: 4em; border: 1px gray; padding:20px;">
-        fxLayout="row">
-        <input matInput class="searchBar" placeholder="Take a note...">
-    </mat-card>
-    <mat-card style="height: 12em;"  fxLayout="column">
-        <div id="pindiv">
-            <!-- <app-pin-notes id="pin"></app-pin-notes> -->
-            <!-- <a><img id="pin" src="assets/icon/unpin.svg" *ngIf="!isPinned" (click)="isPinned=!isPinned && onSubmit()"/></a>
-            <a><img id="pin" src="assets/icon/pinned.svg" *ngIf="isPinned" (click)="isPinned=!isPinned && onSubmit()"/></a> -->
-
-        </div>
-          
-            <textarea id="title"  style="border: none;" matInput type="text" class="input" placeholder="Title"></textarea>
-        <textarea id="desc" style="border: none; " matInput type="text" class="input" placeholder="Take a note"
-            [(ngModel)]="note.description"></textarea>
-           
-    </mat-card>
-</div>
+<div class="createnote" fxFlex>
+    <div>
+      <mat-card class="takeNote">
+        <div >
+          <div>
+            <input matInput class="notedata" placeholder="Take a note..." >
+          </div>
+          <div >
+            <div>
+              <button mat-icon-button class="iconbutton">
+                <mat-icon>check_box</mat-icon>
+              </button>
+            </div>
+            </div>
+            </div>
+            </mat-card>
+            </div>
+            </div>
