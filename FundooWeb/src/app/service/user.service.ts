@@ -19,12 +19,6 @@ export class UserService {
     };
 
   constructor( private httpService:HttpService) { }
-
-  // userRegistration(user:User):Observable<any>
-  // {
-  //   console.log("User Email",user.email);
-  //   return this.httpservice.postRequest(this.userApiUrl+environment.registerURL,user,this.httpOtions);
-  // }
   userRegistration(user:User)
   {
     return this.httpService.postRequest(this.userApiUrl+environment.registerURL,user,this.httpOtions);
