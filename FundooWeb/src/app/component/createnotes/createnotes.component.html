@@ -1,18 +1,19 @@
-<div class="createnote" fxFlex>
-    <div>
-      <mat-card class="takeNote">
-        <div >
-          <div>
-            <input matInput class="notedata" placeholder="Take a note..." >
-          </div>
-          <div >
-            <div>
-              <button mat-icon-button class="iconbutton">
-                <mat-icon>check_box</mat-icon>
-              </button>
+<div class="container" >
+    <mat-card  class="matcard" *ngIf="!open" (click)="onopen()">
+        <input matInput class="searchBar" placeholder="Take a note...">
+        <div class="icondiv">
+            <mat-icon style="margin-left: 10px;">event_available</mat-icon>
+            <mat-icon style="margin-left: 10px;">edit</mat-icon>
+            <mat-icon style="margin-left: 10px;">image</mat-icon>
+        </div>
+    </mat-card>
+    <mat-card class="matcard1"  *ngIf="open"  fxLayout="column">
+         <textarea id="title"  style="border: none;" [formControl] ="titleFormControl" matInput type="text" class="input" placeholder="Title"></textarea>
+            <textarea id="description" style="border: none; "  [formControl] ="descriptionFormControl" matInput type="text" class="input" placeholder="Take a note"></textarea>
+            <div class="icon" >
+                <div (click)="open=!open">
+                    <button (click)="onCreateNote()" >Close</button>
+                </div>
             </div>
-            </div>
-            </div>
-            </mat-card>
-            </div>
-            </div>
+    </mat-card>
+</div>
