@@ -48,10 +48,10 @@ export class LoginComponent implements OnInit {
       (response:any) =>{
         console.log(response.message)
          if(response.statuscode===200){
-          // console.log(response.headers.get("jwt-token"));
+          
            localStorage.setItem('token',response.token);
           //  this.router.navigateByUrl('home');
-          this.router.navigate(["/register"]);
+          this.router.navigate(["/dashboard"]);
          }else{
 
            this.snackBar.open('Login Fail', "", {duration:3000})
