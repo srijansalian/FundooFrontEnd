@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
   children:[
     {path:'createnotes',component:CreatenotesComponent}
-  ]}, 
+    ,{path:'',component:CreatenotesComponent}]},
 ];
 
 @NgModule({
