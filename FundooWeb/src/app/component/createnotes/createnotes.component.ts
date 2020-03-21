@@ -24,6 +24,10 @@ export class CreatenotesComponent implements OnInit {
   onopen(){
     this.open=true;
   }
+
+  pin(){
+    this.note.isPin=this.isPinned;
+  }
   onCreateNote(){
     
     this.note.title=this.titleFormControl.value;

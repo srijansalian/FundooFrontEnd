@@ -12,7 +12,8 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 70%;
+    width: 90%;
+    // box-sizing: border-box;
     border:none;
     outline:none;
     float: left;
@@ -96,3 +97,9 @@ button{
 //   button:active{
 //       background-color: gainsboro;
 //   }
+.onClickTitle{
+    resize: none;
+    border:none;
+    outline: none;
+    width: 260%;
+}
