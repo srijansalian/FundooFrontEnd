@@ -31,6 +31,7 @@ import { HttpClient, HttpHeaders,HttpClientModule } from '@angular/common/http';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
+import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CreatenotesComponent } from './component/createnotes/createnotes.compon
     ResetpasswordComponent,
     DashboardComponent,
     CreatenotesComponent,
+    DisplaynotesComponent,
 
    
   ],
