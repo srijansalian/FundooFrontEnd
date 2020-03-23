@@ -1,7 +1,31 @@
+<!-- 
 <div class="bock-d" *ngIf="!trashedNotes && !archiveNotes &&!searchNotes &&!labelNotes">
     <div class="pin" >
         Pinned Notes
     </div>
-   
-    
-</div>
+    <div class="main-div" >
+       
+        <div class="getAllNotes" *ngFor="let note of pinNotes" fxLayout="{{view}}" [fxLayoutAlign]="center"
+            fxFlexOffset="2">
+            <mat-card class="getNotesMat"  [ngStyle]="{'background-color':note.color}">
+                <div id="matdiv">
+                    <div class="pindiv" (click)="unpin=!unpin">
+                        <a><img id="pin" src="assets/icon/pinned.svg"  (click)="onPin(note.id)"/></a>
+                    </div>
+
+                    <mat-card-title (click)="openDialog(note)">
+                        {{note.title}}
+                    </mat-card-title>
+
+                    <mat-card-content (click)="openDialog(note)">
+                        {{note.description}}
+                    </mat-card-content>
+
+                    <div class="icon">
+                        <app-notes-iconlist [note]="note" class="app-note-list"></app-notes-iconlist>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div> -->

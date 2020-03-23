@@ -32,6 +32,7 @@ import { ResetpasswordComponent } from './component/resetpassword/resetpassword.
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { DisplaynotesComponent } from './component/displaynotes/displaynotes.com
     MatTableModule,
     MatPaginatorModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FlexLayoutModule
    
    
 
@@ -98,6 +100,7 @@ import { DisplaynotesComponent } from './component/displaynotes/displaynotes.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FlexLayoutModule
     
    
   ],

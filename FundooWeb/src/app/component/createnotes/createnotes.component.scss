@@ -40,7 +40,7 @@
    // justify-content: center;
     width: 45%;
     border-radius: 1em;
-    height: 10em;
+    height: 12em;
     
 } 
 textarea{
@@ -91,16 +91,23 @@ button{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     outline: none;
-    margin-top: 85%;
+margin-top: 20%;
     padding-right: 45px;
   }
  
-//   button:active{
-//       background-color: gainsboro;
-//   }
+  button:active{
+      background-color: gainsboro;
+  }
 .onClickTitle{
     resize: none;
     border:none;
     outline: none;
     width: 260%;
+}
+.description{
+    resize: none;
+    border:none;
+    outline: none;
+    width: 260%;
+
 }
