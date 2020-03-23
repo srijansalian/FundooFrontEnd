@@ -1,4 +1,4 @@
-<div class="createnotes" >
+ <div class="createnotes" fxLayout="row wrap" fxLayoutAlign="center center" >
     <mat-card  class="matcard" *ngIf="!open" (click)="onopen()">
         <input matInput class="searchBar" placeholder="Take a note...">
         <div class="icondiv">
@@ -14,31 +14,31 @@
         <div>
             <textarea matInput class="onClickTitle" placeholder="Title" [formControl]="titleFormControl"
               [style.background-color]="color"></textarea>
-          </div>
+          
           <div *ngIf="!pin">
-            <button mat-icon-button class="pin" style="margin:-10px;" (click)="pin=!pin;archive=false">
+            <button mat-icon-button style="margin:10px;" (click)="pin=!pin;archive=false">
               <mat-icon class="pin">
                 <img src="../../../assets/icons/pinned.svg">
               </mat-icon>
             </button>
           </div>
           <div *ngIf="pin">
-            <button mat-icon-button class="pin" style="margin:-10px;" (click)="pin=!pin ;archive=false">
+            <button mat-icon-button style="margin:10px;" (click)="pin=!pin ;archive=false">
               <mat-icon class="pin">
                 <img src="../../../assets/icons/notpinned.svg">
               </mat-icon>
             </button>
+            </div>
           </div>
           </div>
           
             <textarea id="description" style="border: none; "  [formControl] ="descriptionFormControl" matInput type="text" class="input" placeholder="Take a note"></textarea>
             <div class="icon" >
-                <div (click)="open=!open">
+                <div class="button" fxLayout="row wrap" fxLayoutGap="10px">
+                                <div (click)="open=!open">
                     <button (click)="onCreateNote()" >Close</button>
+                    </div>
                 </div>
-            </div>  
-        
-              </mat-card>
-             
-    
-</div>
+            </div> 
+        </mat-card>    
+</div> 

@@ -6,6 +6,7 @@ import { ForgotpasswordComponent } from './component/forgotpassword/forgotpasswo
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
+import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   children:[
     {path:'createnotes',component:CreatenotesComponent}
     ,{path:'',component:CreatenotesComponent}]},
+    {path:'displaynotes',component:DisplaynotesComponent},
 ];
 
 @NgModule({
