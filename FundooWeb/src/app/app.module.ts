@@ -33,6 +33,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SinglennoteComponent } from './component/singlennote/singlennote.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DashboardComponent,
     CreatenotesComponent,
     DisplaynotesComponent,
+    SinglennoteComponent,
 
    
   ],
