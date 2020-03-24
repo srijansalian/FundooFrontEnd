@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SinglennoteComponent } from './singlennote.component';
+import { SinglenoteComponent } from './singlenote.component';
 
-describe('SinglennoteComponent', () => {
-  let component: SinglennoteComponent;
-  let fixture: ComponentFixture<SinglennoteComponent>;
+describe('SinglenoteComponent', () => {
+  let component: SinglenoteComponent;
+  let fixture: ComponentFixture<SinglenoteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SinglennoteComponent ]
+      declarations: [ SinglenoteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SinglennoteComponent);
+    fixture = TestBed.createComponent(SinglenoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,6 +9,7 @@ export const environment = {
   forgotpasswordURL:'/forgotpassword',  
   setpassword:'/resetpassword/',
   createnote:'/create',
+  getallnote:'/getnote',
   
 };
 

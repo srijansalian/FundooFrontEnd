@@ -1,0 +1,33 @@
+<div fxLayout="row wrap" >
+    
+    <mat-card class="card" [style.background-color]="note.color" [ngClass]="direction =='row' ? 'row':'column'">
+        
+        <mat-card-content>
+            
+        <div fxLayout="column wrap" >
+           
+          <textarea  [value]="note.title" class="textArea"
+            [style.background-color]="note.color" (click)="openNoteDialog()">
+            
+         </textarea>
+         
+        </div>
+        <div fxLayout="column wrap">
+          <textarea [value]="note.description" class="textArea" (click)="openNoteDialog()">
+         </textarea>
+        </div>
+    
+        
+        <div>
+            <mat-icon style=" zoom: 0.6;" >add_alert</mat-icon>
+            <mat-icon style=" zoom: 0.6;">person_add</mat-icon>
+            <mat-icon  style=" zoom: 0.6;">color_lens</mat-icon>
+            <mat-icon style=" zoom: 0.6;">crop_original</mat-icon>
+            <mat-icon style=" zoom: 0.6;">archive</mat-icon>
+          </div>
+        </mat-card-content>
+        
+        </mat-card>
+        
+        </div>
+        
