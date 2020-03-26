@@ -7,7 +7,8 @@ import { ResetpasswordComponent } from './component/resetpassword/resetpassword.
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
-import { SinglenoteComponent } from './service/singlenote/singlenote.component';
+import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
+
 
 
 
@@ -21,9 +22,11 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
   children:[
     {path:'createnotes',component:CreatenotesComponent}
-    ,{path:'',component:CreatenotesComponent}]},
+    ,{path:'',component:CreatenotesComponent},
+    {path:'displaynotes',component:DisplaynotesComponent}]},
     {path:'displaynotes',component:DisplaynotesComponent},
-    {path:'singlenote',component:SinglenoteComponent},
+    {path:'pinnednotes',component:PinnednotesComponent}
+    
 ];
 
 @NgModule({

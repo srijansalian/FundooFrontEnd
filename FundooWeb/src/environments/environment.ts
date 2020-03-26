@@ -10,6 +10,10 @@ export const environment = {
   setpassword:'/resetpassword/',
   createnote:'/create',
   getallnote:'/getnote',
+  updateNote:'/update',
+  pinNote:'/pin/',
+  getAllNotes:'/getallnotes',
+  getPinNote:'/getPinned',
   
 };
 

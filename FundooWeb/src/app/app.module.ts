@@ -33,7 +33,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SinglenoteComponent } from './service/singlenote/singlenote.component';
+
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
 
 
@@ -48,7 +48,7 @@ import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.compon
     DashboardComponent,
     CreatenotesComponent,
     DisplaynotesComponent,
-    SinglenoteComponent,
+
     PinnednotesComponent,
   
 

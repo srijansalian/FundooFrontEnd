@@ -26,7 +26,7 @@ export class CreatenotesComponent implements OnInit {
   }
 
   pin(){
-    this.note.isPin=this.isPinned;
+    this.note.isPinned=this.isPinned;
   }
   onCreateNote(){
     

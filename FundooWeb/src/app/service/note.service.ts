@@ -14,6 +14,7 @@ const httpOptions =
 })
 export class NoteService {
   notesApiURL=environment.notesApiURL;
+  private token=(localStorage.token)
   private Title=new Subject<any>();
   private httpOptions={headers:new HttpHeaders({'content-type':'application/json'})};
 
@@ -23,7 +24,18 @@ export class NoteService {
   {
     return this.httpService.postRequest(this.notesApiURL+environment.createnote,note,{headers:new HttpHeaders({"token":localStorage.token})});
   }
-  NoteGetAll( ){
-    return this.httpService.postRequest(this.notesApiURL+environment.getallnote, "",httpOptions);
-     }   
+  getAllNote(): Observable<any> { 
+       
+    return this.httpService.getRequest(this.notesApiURL+environment.getAllNotes,{headers:new HttpHeaders({'token':this.token})});
+    console.log("lp1")
+}
+  getPinnedAllNote(): Observable<any> { 
+        
+      return this.httpService.getRequest(this.notesApiURL+environment.getPinNote,{headers:new HttpHeaders({"token":localStorage.token})});
+      
+  }
+  pinNote(note:any): Observable<any> { 
+      return this.httpService.getRequest(this.notesApiURL+environment.pinNote+note.id,{headers:new HttpHeaders({'token':this.token})});
+      
+  } 
 }

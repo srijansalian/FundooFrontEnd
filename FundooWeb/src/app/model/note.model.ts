@@ -1,5 +1,14 @@
 export class Note {
-    title:String;
-    description:String;
-    isPin:boolean;
+    title:string;
+    id:number;
+    description:string;
+    
+    isTrashed:boolean;
+    isPinned:boolean;
+    isArchieved:boolean;
+    colour:string;
+    reminder:string;
+    createdDateAndTime:number;
+    reminderStatus:boolean;
+    upDateAndTime:number;
 }
