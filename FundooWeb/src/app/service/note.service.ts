@@ -3,6 +3,7 @@ import { HttpService } from './http.service';
 import { Subject, Observable } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Note } from '../model/note.model';
 
 const httpOptions = 
               {headers: new HttpHeaders({"Content-Type":"application/json",
@@ -27,7 +28,7 @@ export class NoteService {
   getAllNote(): Observable<any> { 
        
     return this.httpService.getRequest(this.notesApiURL+environment.getAllNotes,{headers:new HttpHeaders({'token':this.token})});
-    console.log("lp1")
+   
 }
   getPinnedAllNote(): Observable<any> { 
         
@@ -38,4 +39,11 @@ export class NoteService {
       return this.httpService.getRequest(this.notesApiURL+environment.pinNote+note.id,{headers:new HttpHeaders({'token':this.token})});
       
   } 
+  private _getNotesUrl:string='/assets/noteinfo/noteinfo.json';
+  getAllNotes():Observable<Note[]>
+  {
+   return this.http.get<Note[]>(this._getNotesUrl);
+   //  return this._httpService.getRequest(this._getNotesUrl);
+   //  return this._httpService.getRequest(this.noteApiUrl+this.getAllNotesUrl);
+  }
 }

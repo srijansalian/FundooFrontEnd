@@ -1,17 +1,32 @@
-.datainput{
-  resize: none;
-  outline: none;
-  border: none;
-  
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+#container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    margin-left: 8rem;
+    margin-right: 5rem;
+    align-items: flex-end;
+    width: auto;
 }
-// .card{
-//   height: 5%;
-// }
-.mat-card{
-  border-radius: 7px;
-  border: 1px solid lightgray;
-  width:18%;
-  min-height: 160px;
-  padding: 0;
-  float: left;
+
+.matDisplay{
+    display: flex;
+    width: 20rem;
+    height: auto;
+    //  justify-content: space-between;
+   
+}
+
+mat-card{
+    border-radius: 15px;
+    border: 1px solid transparent;
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+}
+
+.noteIcon{
+    display: flex;
+    justify-content: space-around;
+    
 }

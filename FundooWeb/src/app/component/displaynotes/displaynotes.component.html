@@ -1,30 +1,35 @@
-<div fxLayout="row"  fxLayoutAlign="space-around start" >
-    <mat-card class="card"  [style.padding]="none" >
-    <mat-card-content >
-      <div fxLayout="column wrap">
-        <textarea  #mytitle matInput   [(ngModel)]="title" class="datainput" placeholder="Title"  >
-       </textarea>
-      </div>
-      <div fxLayout="column wrap">
-        <textarea #myInput matInput  [(ngModel)]="description"  class="datainput" placeholder="description"  >
-       </textarea>
-      </div>
-      <div fxLayoutAlign="space-evenly end" >
-      
-        <button class="buttons"  mat-icon-button>
-          <mat-icon>notifications</mat-icon>
-        </button>
-        <button class="buttons" mat-icon-button>
-          <mat-icon>person_add</mat-icon>
-        </button>
-        <button class="buttons" mat-icon-button >
-          <mat-icon>color_lens</mat-icon>
-        </button> 
-        <button class="buttons" mat-icon-button>
-          <mat-icon>crop_original</mat-icon>
-        </button>
-        </div>
-      </mat-card-content>
-      </mat-card>
-      </div>
-      
+
+<div id="container">
+    <div class="matDisplay" *ngFor="let note of noteDetails" >
+        <mat-card [style.background-color]="note.colour">
+            <div class="matTitle">
+                <mat-card-title>
+                    {{note.title}}
+                    
+                </mat-card-title>
+            </div>
+            <div class="matDesc">
+                <mat-card-content>
+                    {{note.description}}
+                </mat-card-content>
+            </div>
+            <div class="noteIcon">
+                <button mat-icon-button>
+                    <mat-icon>notifications</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>person_add</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>color_lens</mat-icon>
+                </button >
+                <button mat-icon-button>
+                    <mat-icon>crop_original</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>archive</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -1,20 +1,20 @@
 [
     {
         "noteid":1,
-        "title":"First Note Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "description":"First note desc",
+        "title":"Bridge Labz",
+        "description":"Bangalore",
         "isArchived":"false",
         "isPinned":"false",
         "isTrashed":"false",
         "createdAt":"9:20:07 AM",
         "updatedAt":"",
-        "colour":"yellowgreen",
+        "colour":"white",
         "reminder":""
     },
     {
-        "noteid":1,
-        "title":"Second Note",
-        "description":"Second note desc  Numquam eveniet architecto veritatis tempora aliquid veniam autem sit,",
+        "noteid":2,
+        "title":"Introduction",
+        "description":"Hello, Nice to meet You",
         "isArchived":"false",
         "isPinned":"false",
         "isTrashed":"false",
