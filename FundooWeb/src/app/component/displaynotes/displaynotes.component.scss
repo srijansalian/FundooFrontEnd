@@ -1,5 +1,17 @@
 .datainput{
   resize: none;
   outline: none;
+  border: none;
   
+}
+// .card{
+//   height: 5%;
+// }
+.mat-card{
+  border-radius: 7px;
+  border: 1px solid lightgray;
+  width:18%;
+  min-height: 160px;
+  padding: 0;
+  float: left;
 }
