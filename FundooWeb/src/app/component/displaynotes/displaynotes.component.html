@@ -2,13 +2,13 @@
 <div id="container">
     <div class="matDisplay" *ngFor="let note of noteDetails" >
         <mat-card [style.background-color]="note.colour">
-            <div class="matTitle">
+            <div class="title">
                 <mat-card-title>
                     {{note.title}}
                     
                 </mat-card-title>
             </div>
-            <div class="matDesc">
+            <div class="description">
                 <mat-card-content>
                     {{note.description}}
                 </mat-card-content>
