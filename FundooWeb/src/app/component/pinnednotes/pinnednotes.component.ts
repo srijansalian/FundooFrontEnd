@@ -24,24 +24,24 @@ export class PinnednotesComponent implements OnInit {
   ngOnInit() {
   }
 
-  // pinnedNote() {
-  //   console.log(this.note.id);
-  //   this.noteService.pinNote(this.note.id).subscribe(response => {
-  //     if (this.note.isPinned) {
-  //       this.isPinned = false;
-  //       this.matSnackBar.open("Note unPinned Successfully", 'Ok', { duration: 3000 });
+  pinnedNote() {
+    console.log(this.note.id);
+    this.noteService.pinNote(this.note.id).subscribe(response => {
+      if (this.note.isPinned) {
+        this.isPinned = false;
+        this.matSnackBar.open("Note unPinned Successfully", 'Ok', { duration: 3000 });
         
-  //     }
-  //     else if (!this.note.isPinned) {
-  //       this.isPinned = true;
-  //       this.matSnackBar.open("Note Pinned Successfully", 'Ok', { duration:3000 });
+      }
+      else if (!this.note.isPinned) {
+        this.isPinned = true;
+        this.matSnackBar.open("Note Pinned Successfully", 'Ok', { duration:3000 });
         
-  //     }
-  //     console.log(response);
-  //   },
-  //     (error: any) => {
-  //       console.log("error");
-  //     });
-  // }
+      }
+      console.log(response);
+    },
+      (error: any) => {
+        console.log("error");
+      });
+  }
 
 }
