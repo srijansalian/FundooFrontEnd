@@ -35,6 +35,7 @@ import { DisplaynotesComponent } from './component/displaynotes/displaynotes.com
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
+import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 
 
 
@@ -50,6 +51,8 @@ import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.compon
     DisplaynotesComponent,
 
     PinnednotesComponent,
+
+    SinglenoteComponent,
   
 
    
