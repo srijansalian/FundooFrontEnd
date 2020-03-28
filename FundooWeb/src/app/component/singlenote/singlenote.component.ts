@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
+import {Note } from '../../model/note.model';
+
 
 @Component({
   selector: 'app-singlenote',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinglenoteComponent implements OnInit {
 
+  @Input() noteDetail:Note;
   constructor() { }
 
   ngOnInit() {

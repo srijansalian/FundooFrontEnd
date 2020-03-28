@@ -8,6 +8,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
+import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     {path:'createnotes',component:CreatenotesComponent}
     ,{path:'',component:CreatenotesComponent},
     {path:'displaynotes',component:DisplaynotesComponent}]},
+    {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'pinnednotes',component:PinnednotesComponent}
     

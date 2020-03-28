@@ -1,35 +1,5 @@
-
-<div id="container">
-    <div class="matDisplay" *ngFor="let note of noteDetails" >
-        <mat-card [style.background-color]="note.colour">
-            <div class="title">
-                <mat-card-title>
-                    {{note.title}}
-                    
-                </mat-card-title>
-            </div>
-            <div class="description">
-                <mat-card-content>
-                    {{note.description}}
-                </mat-card-content>
-            </div>
-            <div class="noteIcon">
-                <button mat-icon-button>
-                    <mat-icon>notifications</mat-icon>
-                </button>
-                <button mat-icon-button>
-                    <mat-icon>person_add</mat-icon>
-                </button>
-                <button mat-icon-button>
-                    <mat-icon>color_lens</mat-icon>
-                </button >
-                <button mat-icon-button>
-                    <mat-icon>crop_original</mat-icon>
-                </button>
-                <button mat-icon-button>
-                    <mat-icon>archive</mat-icon>
-                </button>
-            </div>
-        </mat-card>
+<div id="container" fxLayout="row wrap" fxLayout.xs="coloum wrap">
+    <div   *ngFor="let notedetail of noteDetails">
+        <app-singlenote [noteDetail]="notedetail" ></app-singlenote>
     </div>
-</div>
+    </div>
