@@ -20,5 +20,8 @@ export class DashboardComponent implements OnInit {
   note(){
     this.router.navigateByUrl('dashboard');
   }
+  onArchive(){
+    this.router.navigateByUrl('archive');
+  }
 
 }

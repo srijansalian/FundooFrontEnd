@@ -1,0 +1,8 @@
+<div id="container" fxLayout="rowGrid" >
+    <div class="label">Archiced</div>
+    <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+        <div   *ngFor="let notedetail of noteDetails">
+            <app-singlenote [noteDetail]="notedetail" ></app-singlenote>
+        </div>
+        </div>
+    </div>

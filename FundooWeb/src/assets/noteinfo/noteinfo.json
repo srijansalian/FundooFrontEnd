@@ -16,7 +16,7 @@
         "title":"Introduction",
         "description":"Hello, Nice to meet You",
         "isArchived":"false",
-        "isPinned":"false",
+        "isPinned":"true",
         "isTrashed":"false",
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
