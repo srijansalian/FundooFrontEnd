@@ -3,6 +3,9 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { Note } from '../../model/note.model';
 import { NoteService } from '../../service/note.service';
 import { Router } from '@angular/router';
+import { debug } from 'util';
+import { GetnotesService } from '../../service/getnotes.service';
+
 
 @Component({
   selector: 'app-displaynotes',
@@ -11,14 +14,39 @@ import { Router } from '@angular/router';
 })
 export class DisplaynotesComponent implements OnInit {
 
+  respo
+  pined=new Array<Note>();
+  others=new Array<Note>();
+  displayNotes=new Array<Note>();
+
   constructor(private noteservice: NoteService,
      private router: Router) { }
      private noteDetails:Note[];
+     
      ngOnInit() {
+       debug
        this.noteservice.getAllNotes()
-             .subscribe((noteData => this.noteDetails=noteData));
-             console.log('Notes ',this.noteDetails);
+             .subscribe((noteData => {
+              this.respo=noteData;
+              this.displayNotes=this.respo;
+             this. pined=[];
+              this.others=[];
+              this.displayNotes.filter(note=>note.isPinned===false&&note.isArchieved===false&&note.isTrashed===false).map(note=>this.others.push(note));
+              this.displayNotes.filter(note=>note.isPinned===true&&note.isArchieved===false&&note.isTrashed===false).map(note=>this.pined.push(note)); 
+               this.noteDetails=noteData;
+               console.log(this.displayNotes);
+               console.log(this.others);
+               console.log(this.pined);
+              //  console.log(noteData);
+              //  console.log(this.respo);
+               
+               
+             }));
+             
+             
      }
+
+
     }
 
   

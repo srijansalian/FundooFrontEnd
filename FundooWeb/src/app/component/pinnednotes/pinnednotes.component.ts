@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
@@ -12,9 +12,8 @@ import { NoteService } from '../../service/note.service';
   styleUrls: ['./pinnednotes.component.scss']
 })
 export class PinnednotesComponent implements OnInit {
-
   [x: string]: any;
-  note:Note=new Note();
+  @Input() note: Note;
   isPinned: boolean;
   Token=localStorage.getItem('token');
 
@@ -30,14 +29,15 @@ export class PinnednotesComponent implements OnInit {
       if (this.note.isPinned) {
         this.isPinned = false;
         this.matSnackBar.open("Note unPinned Successfully", 'Ok', { duration: 3000 });
-        
+        // this.dialogRef.close();
       }
       else if (!this.note.isPinned) {
         this.isPinned = true;
         this.matSnackBar.open("Note Pinned Successfully", 'Ok', { duration:3000 });
-        
+        // this.dialogRef.close();
       }
       console.log(response);
+      // this.dialogRef.close();
     },
       (error: any) => {
         console.log("error");

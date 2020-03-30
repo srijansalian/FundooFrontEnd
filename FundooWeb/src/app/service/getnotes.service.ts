@@ -8,21 +8,28 @@ import {NoteService } from '../service/note.service';
   providedIn: 'root'
 })
 export class GetnotesService {
-  notes = new Array<Note>();
+  notes:Note[]
+pinNoteList:Note[]
+archievenotes:Note[]
+  constructor() { }
+  setNotesList(message: Note[]) {
+    this.notes=message
+  }
+  getNotesList(){
+  
+    return this.notes
 
-
-  constructor(private noteService:NoteService) {  }
-  subject=new Subject();
-  // getnote(){
-  //  this.allNote()
-  //   return this.subject.asObservable();
-  // }
-  //  allNote() {
-  //   this.noteService.getAllNote.subscribe(
-  //     (response: any) => {
-  //       this.notes = response;
-  //       this.subject.next({data:this.notes})
-  //     }
-  //   );
-  // }
+  }
+  setPinNotesList(message: Note[]) {
+    this.pinNoteList=message
+  }
+  getPinNotesList() {
+   return this.pinNoteList
+  }
+  setarchieveNotesList(message: Note[]) {
+    this.archievenotes=message
+  }
+  getarchieveNotesList() {
+   return this.archievenotes
+  }
 }

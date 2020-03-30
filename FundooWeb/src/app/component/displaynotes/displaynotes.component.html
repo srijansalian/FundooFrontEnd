@@ -1,5 +1,16 @@
-<div id="container" fxLayout="row wrap" fxLayout.xs="coloum wrap">
-    <div   *ngFor="let notedetail of noteDetails">
-        <app-singlenote [noteDetail]="notedetail" ></app-singlenote>
+<div id="container" fxLayout="rowGrid" >
+    <div *ngIf="pined ? pined.length>0:false" >
+    <div class="label">PINNED</div>
+    <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+    <div   *ngFor="let item of pined">
+        <app-singlenote [noteDetail]="item" ></app-singlenote>
     </div>
+    </div>
+    </div>
+    <div class="label">OTHERS</div>
+    <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+        <div   *ngFor="let notedetail of noteDetails">
+            <app-singlenote [noteDetail]="notedetail" ></app-singlenote>
+        </div>
+        </div>
     </div>
