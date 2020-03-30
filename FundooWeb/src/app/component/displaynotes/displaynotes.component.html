@@ -9,8 +9,8 @@
     </div>
     <div class="label">OTHERS</div>
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
-        <div   *ngFor="let notedetail of noteDetails">
-            <app-singlenote [noteDetail]="notedetail" ></app-singlenote>
+        <div   *ngFor="let item of others">
+            <app-singlenote [noteDetail]="item" ></app-singlenote>
         </div>
         </div>
     </div>

@@ -35,10 +35,11 @@ export class DisplaynotesComponent implements OnInit {
               console.log(this.displayNotes.filter(note=>note.noteid===1));
               console.log(this.displayNotes.filter(note=>note.title==="Introduction"));
               console.log(this.displayNotes.filter(note=>note.isPinned===false));
+              console.log(this.displayNotes.filter(note=>note.isArchived===false));
               console.log(this.displayNotes.filter(note=>note.isPinned===false&&note.isArchived===false&&note.isTrashed===false));
               this.displayNotes.filter(note=>note.isPinned===false&&note.isArchived===false&&note.isTrashed===false).map(note=>this.others.push(note));
               this.displayNotes.filter(note=>note.isPinned===true&&note.isArchived===false&&note.isTrashed===false).map(note=>this.pined.push(note)); 
-               this.noteDetails=noteData;
+              // this.noteDetails=noteData;
                
                console.log(this.others);
                console.log(this.pined);
