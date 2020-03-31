@@ -1,16 +1,37 @@
-<div id="container" fxLayout="rowGrid" >
+<div class="label">PINNED</div>
+<div id="container" fxLayout="rowGrid" fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div *ngIf="pined ? pined.length>0:false" >
-    <div class="label">PINNED</div>
+    
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
     <div   *ngFor="let item of pined">
         <app-singlenote [noteDetail]="item" ></app-singlenote>
     </div>
     </div>
-    </div>
-    <div class="label">OTHERS</div>
+    </div></div>
+    
+    <div class="label" >OTHERS</div>
+    <div id="container" fxLayout="rowGrid" fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
         <div   *ngFor="let item of others">
             <app-singlenote [noteDetail]="item" ></app-singlenote>
         </div>
         </div>
     </div>
+
+    <!-- <div id="container" fxLayout="rowGrid" >
+        <div class="label">ARCHIVED</div>
+        <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+            <div   *ngFor="let item of archive">
+                <app-singlenote [noteDetail]="item" ></app-singlenote>
+            </div>
+            </div>
+        </div>
+        <div id="container" fxLayout="rowGrid" >
+            <div class="label">Trashed</div>
+            <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+                <div   *ngFor="let item of trash">
+                    <app-singlenote [noteDetail]="item" ></app-singlenote>
+                </div>
+                </div>
+            </div> -->
+        
