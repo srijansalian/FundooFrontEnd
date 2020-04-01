@@ -14,6 +14,10 @@ import { GetnotesService } from '../../service/getnotes.service';
 })
 export class DisplaynotesComponent implements OnInit {
 
+  trashedNotes: boolean = false;
+  archiveNotes: boolean = false;
+  trashEmpty:boolean=false;
+
   respo
   pined=new Array<Note>();
   others=new Array<Note>();
@@ -40,10 +44,14 @@ export class DisplaynotesComponent implements OnInit {
         }
         else
         {
-          this.displayNote();
+         this.displayNote();
+         
         }
       }
        displayNote(){
+        this.trashedNotes = false;
+        this.archiveNotes = false;
+        this.trashEmpty=false;
        this.noteservice.getAllNotes()
              .subscribe((noteData => {
               this.respo=noteData;
@@ -61,15 +69,14 @@ export class DisplaynotesComponent implements OnInit {
                
                console.log(this.others);
                console.log(this.pined);
-              // console.log(this.archive);
-              // console.log(this.trash);
-              //  console.log(noteData);
-              //  console.log(this.respo);
-               
-               
+  
              }));
             }
             ArchiveNotes(){
+              this.archiveNotes = true;
+              this.trashedNotes = false;
+              this.trashEmpty=false;
+   
               this.noteservice.getAllNotes()
              .subscribe((noteData => {
               this.respo=noteData;
@@ -81,6 +88,7 @@ export class DisplaynotesComponent implements OnInit {
           }
 
           TrashNotes(){
+            this.trashedNotes = true;
             this.noteservice.getAllNotes()
             .subscribe((noteData => {
              this.respo=noteData;

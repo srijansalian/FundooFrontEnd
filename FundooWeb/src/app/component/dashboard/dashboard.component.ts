@@ -20,8 +20,14 @@ export class DashboardComponent implements OnInit {
   note(){
     this.router.navigateByUrl('dashboard');
   }
+  // onArchive(){
+  //   this.router.navigateByUrl('archive');
+  // }
   onArchive(){
-    this.router.navigateByUrl('archive');
+    this.router.navigate(['displaynotes','archive']);
+  }
+  ontrash(){
+    this.router.navigate(['/displaynotes','trash']);
   }
 
 }
