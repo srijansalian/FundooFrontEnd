@@ -25,8 +25,10 @@ const routes: Routes = [
   children:[
     {path:'createnotes',component:CreatenotesComponent}
     ,{path:'',component:CreatenotesComponent},
-    {path:'',component:DisplaynotesComponent},
-    {path:'displaynotes',component:DisplaynotesComponent}]},
+    //{path:'',component:DisplaynotesComponent},
+    {path:'displaynotes',component:DisplaynotesComponent},
+    //{path:'displaynotes/:note',component:DisplaynotesComponent},
+  ]},
     {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'pinnednotes',component:PinnednotesComponent},
