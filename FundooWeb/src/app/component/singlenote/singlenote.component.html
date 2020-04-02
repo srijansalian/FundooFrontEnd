@@ -1,6 +1,13 @@
 <div id="container" >
     <div class="matDisplay"  >
         <mat-card [style.background-color]="noteDetail.colour">
+            <div *ngIf="!pin">
+                <button mat-icon-button class="pin" >
+                  <mat-icon >
+                    <img src="../../../assets/icons/pinned.svg">
+                  </mat-icon>
+                </button>
+              </div>
             <div class="matTitle">
                 <mat-card-title>
                     {{noteDetail.title}}

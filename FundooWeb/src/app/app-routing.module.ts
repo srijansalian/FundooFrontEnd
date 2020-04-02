@@ -23,17 +23,17 @@ const routes: Routes = [
   {path:'resetpassword/:token',component:ResetpasswordComponent},
   {path:'dashboard',component:DashboardComponent,
   children:[
-    {path:'createnotes',component:CreatenotesComponent}
-    ,{path:'',component:CreatenotesComponent},
-    //{path:'',component:DisplaynotesComponent},
-    {path:'displaynotes',component:DisplaynotesComponent},
-    //{path:'displaynotes/:note',component:DisplaynotesComponent},
+    {path:'createnotes',component:CreatenotesComponent},
+    //{path:'',component:CreatenotesComponent},
+    {path:'',component:DisplaynotesComponent},
+   // {path:'displaynotes',component:DisplaynotesComponent},
+    {path:'displaynotes/:note',component:DisplaynotesComponent},
   ]},
     {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'pinnednotes',component:PinnednotesComponent},
     {path:'archive',component:ArchiveComponent},
-    {path:'displaynotes/:note',component:DisplaynotesComponent},
+    // {path:'displaynotes/:note',component:DisplaynotesComponent},
     
 ];
 

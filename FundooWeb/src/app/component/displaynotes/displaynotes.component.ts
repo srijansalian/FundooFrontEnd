@@ -81,8 +81,9 @@ export class DisplaynotesComponent implements OnInit {
              .subscribe((noteData => {
               this.respo=noteData;
               this.displayNotes=this.respo;
-              this.archive=[];
-              this.displayNotes.filter(note=>note.isPinned===false&&note.isArchived===true&&note.isTrashed===false).map(note=>this.archive.push(note));
+             // this.archive=[];
+              this.others=[];
+              this.displayNotes.filter(note=>note.isPinned===false&&note.isArchived===true&&note.isTrashed===false).map(note=>this.others.push(note));
            
             }));
           }
@@ -93,8 +94,9 @@ export class DisplaynotesComponent implements OnInit {
             .subscribe((noteData => {
              this.respo=noteData;
              this.displayNotes=this.respo;
-             this.trash=[];
-             this.displayNotes.filter(note=>note.isTrashed===true).map(note=>this.trash.push(note));
+           //  this.trash=[];
+             this.others=[];
+             this.displayNotes.filter(note=>note.isTrashed===true).map(note=>this.others.push(note));
 
           }));
         }

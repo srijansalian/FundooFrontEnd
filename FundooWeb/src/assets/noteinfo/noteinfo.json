@@ -84,12 +84,36 @@
         "reminder":""
     },
     {
-        "noteid":7,
+        "noteid":8,
         "title":"Colleges Region",
         "description":"Mangalore",
         "isArchived":true,
         "isPinned":false,
         "isTrashed":true,
+        "createdAt":"11:55:07 AM",
+        "updatedAt":"",
+        "colour":"white",
+        "reminder":""
+    },
+    {
+        "noteid":9,
+        "title":"Note 9",
+        "description":"Corona virus",
+        "isArchived":true,
+        "isPinned":false,
+        "isTrashed":true,
+        "createdAt":"11:55:07 AM",
+        "updatedAt":"",
+        "colour":"white",
+        "reminder":""
+    },
+    {
+        "noteid":10,
+        "title":"Mobile",
+        "description":"One +",
+        "isArchived":true,
+        "isPinned":false,
+        "isTrashed":false,
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"white",
