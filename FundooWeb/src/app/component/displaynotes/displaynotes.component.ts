@@ -67,8 +67,8 @@ export class DisplaynotesComponent implements OnInit {
              // this.displayNotes.filter(note=>note.isTrashed===true).map(note=>this.trash.push(note)); 
               // this.noteDetails=noteData;
                
-               console.log(this.others);
-               console.log(this.pined);
+              //  console.log(this.others);
+              //  console.log(this.pined);
   
              }));
             }

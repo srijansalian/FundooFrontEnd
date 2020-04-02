@@ -1,4 +1,6 @@
-<div *ngIf="!trashedNotes && !archiveNotes">
+
+<div *ngIf="!trashedNotes && !archiveNotes">      
+    <app-createnotes></app-createnotes>      
 <div class="label">PINNED</div>
 <div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div *ngIf="pined ? pined.length>0:false" >
@@ -15,7 +17,7 @@
     <div *ngIf="archiveNotes">
         <div class="label">ARCHIVED</div></div>
         <div *ngIf="trashedNotes">
-            <div class="label">Trashed</div></div>
+            <div class="label">TRASHED</div></div>
           
     <div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >

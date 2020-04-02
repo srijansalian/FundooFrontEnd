@@ -1,5 +1,6 @@
 import { Component, OnInit, Input  } from '@angular/core';
 import {Note } from '../../model/note.model';
+//import { noteDetail } from '../displaynotes/displaynotes.component';
 
 
 @Component({
@@ -10,9 +11,17 @@ import {Note } from '../../model/note.model';
 export class SinglenoteComponent implements OnInit {
 
   @Input() noteDetail:Note;
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
   }
+
+  pin(){
+    this.noteDetail.isPinned;
+    console.log( this.noteDetail.isPinned);
+
+  }
+  
+  
 
 }
