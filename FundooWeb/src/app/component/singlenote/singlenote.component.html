@@ -39,9 +39,28 @@
                 <button mat-icon-button>
                     <mat-icon>crop_original</mat-icon>
                 </button>
-                <button mat-icon-button>
-                    <mat-icon>archive</mat-icon>
-                </button>
+                <div>
+                    <button  mat-icon-button  *ngIf="!noteDetail.isArchived" (click)="isArchive=!isArchive">
+                        <mat-icon>archive</mat-icon>
+                    </button>
+                </div>
+                <div>
+                    <button  mat-icon-button  *ngIf="noteDetail.isArchived" (click)="isArchive=!isArchive" >
+                        <mat-icon>unarchive</mat-icon>
+                    </button>
+                </div>
+                <div>
+                    <a><img mat-icon-button [matMenuTriggerFor]="menu" style="height: 1.5rem; width: 2rem; margin-top: 0.5rem;" src="assets/icons/morebutton.svg" matTooltip="More"></a>
+            
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onClickDeleteNote(noteDetail.noteid)">Delete Note</button>
+                    <button mat-menu-item [matMenuTriggerFor]="label">Add Label</button>
+                </mat-menu>
+            
+                <mat-menu #label="matMenu">
+                    <p style="padding: 1rem;">Label</p>
+                  </mat-menu>
+                </div>
             </div>
         </mat-card>
     </div>

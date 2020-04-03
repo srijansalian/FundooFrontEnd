@@ -36,7 +36,7 @@ export class NoteService {
       
   }
   pinNote(note:any): Observable<any> { 
-      return this.httpService.getRequest(this.notesApiURL+environment.pinNote+note.id,{headers:new HttpHeaders({'token':this.token})});
+      return this.httpService.getRequest(this.notesApiURL+environment.pinNote+note.id,{headers:new HttpHeaders({"token":localStorage.token})});
       
   } 
   private _getNotesUrl:string='/assets/noteinfo/noteinfo.json';
@@ -45,5 +45,8 @@ export class NoteService {
    return this.http.get<Note[]>(this._getNotesUrl);
    //  return this._httpService.getRequest(this._getNotesUrl);
    //  return this._httpService.getRequest(this.noteApiUrl+this.getAllNotesUrl);
+  }
+  moveToTrash(noteId:any){
+    return this.httpService.putRequest(this.notesApiURL+environment.trashNote+noteId,{},{headers:new HttpHeaders({'token':localStorage.token})});
   }
 }

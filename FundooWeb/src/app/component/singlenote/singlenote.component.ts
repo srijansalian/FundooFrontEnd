@@ -1,5 +1,6 @@
 import { Component, OnInit, Input  } from '@angular/core';
 import {Note } from '../../model/note.model';
+import { MatTooltip, MatSnackBar, MatDialog } from '@angular/material';
 //import { noteDetail } from '../displaynotes/displaynotes.component';
 
 

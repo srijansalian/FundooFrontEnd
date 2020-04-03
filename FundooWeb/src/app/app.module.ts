@@ -19,7 +19,7 @@ import {MatCardModule,
   MatTooltipModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSnackBarModule} from '@angular/material';
+  MatSnackBarModule,MatMenuModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -89,7 +89,8 @@ import { ArchiveComponent } from './component/archive/archive.component';
     MatPaginatorModule,
     HttpClientModule,
     MatSnackBarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatMenuModule
    
    
 
