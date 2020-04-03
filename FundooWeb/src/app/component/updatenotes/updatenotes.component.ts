@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import { Note } from '../../model/note.model';
+import {NoteService } from '../../service/note.service';
+
 
 @Component({
   selector: 'app-updatenotes',
@@ -6,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./updatenotes.component.scss']
 })
 export class UpdatenotesComponent implements OnInit {
+  note:Note;
 
-  constructor() { }
+  constructor() { 
+      //this.note=this.data.note;
+    }
 
   ngOnInit() {
   }

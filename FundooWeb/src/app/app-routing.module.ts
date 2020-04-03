@@ -10,6 +10,7 @@ import { DisplaynotesComponent } from './component/displaynotes/displaynotes.com
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 import { ArchiveComponent } from './component/archive/archive.component';
+import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 
 
 
@@ -33,7 +34,8 @@ const routes: Routes = [
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'pinnednotes',component:PinnednotesComponent},
     {path:'archive',component:ArchiveComponent},
-    // {path:'displaynotes/:note',component:DisplaynotesComponent},
+    {path:'updatenotes',component:UpdatenotesComponent},
+   
     
 ];
 

@@ -19,7 +19,7 @@ import {MatCardModule,
   MatTooltipModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSnackBarModule,MatMenuModule} from '@angular/material';
+  MatSnackBarModule,MatMenuModule,MatDialogModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +33,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+//import {MatDialogModule, MatDialog } from '@angular/material/dialog';
 
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
@@ -93,7 +94,10 @@ import { UpdatenotesComponent } from './component/updatenotes/updatenotes.compon
     HttpClientModule,
     MatSnackBarModule,
     FlexLayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+  
+    
    
    
 
@@ -119,7 +123,9 @@ import { UpdatenotesComponent } from './component/updatenotes/updatenotes.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
+    
     
    
   ],
