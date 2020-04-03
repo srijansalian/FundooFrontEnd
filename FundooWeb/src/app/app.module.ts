@@ -38,6 +38,7 @@ import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.compon
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 import { DisplayemptyComponent } from './component/displayempty/displayempty.component';
 import { ArchiveComponent } from './component/archive/archive.component';
+import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 
 
 
@@ -59,6 +60,8 @@ import { ArchiveComponent } from './component/archive/archive.component';
     DisplayemptyComponent,
 
     ArchiveComponent,
+
+    UpdatenotesComponent,
   
 
    
