@@ -30,7 +30,7 @@
 </div>
 
 <div  >
-   <a (click)="onClickArchive()"> <img src="assets/icons/archive.svg"  matTooltip="Archive"></a>
+   <a (click)="Archive()"> <img src="assets/icons/archive.svg"  matTooltip="Archive"></a>
 </div>
 
 
@@ -39,7 +39,7 @@
             matTooltip="More"></a>
 
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="onClickDelete()">Delete Note</button>
+        <button mat-menu-item (click)="Delete()">Delete Note</button>
        
         <button mat-menu-item  (click)="openDialog(note)">Add Label</button>
         <button mat-menu-item>Add Drawing</button>

@@ -19,7 +19,7 @@ export class NoteiconComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickDelete() {
+  Delete() {
     this.noteId = this.note.noteid;
     this.noteService.moveToTrash(this.note.noteid).subscribe((response) => {
       this.snackBar.open("Note unpinned and trashed", 'ok', { duration: 5000 });
@@ -32,9 +32,7 @@ export class NoteiconComponent implements OnInit {
   }
   onClickArchive(archive: boolean, isPinned) {
     this.noteService.moveToArchiveNote(this.note.noteid).subscribe((response) => {
-
       if (this.note.isArchived == true) {
-
         this.snackBar.open("UnArchived", "OK", { duration: 5000 });
       }
       if (this.note.isPinned = true) {
@@ -43,7 +41,6 @@ export class NoteiconComponent implements OnInit {
       else {
         this.snackBar.open("Note Archived", "OK", { duration: 5000 });
       }
-
     },
       error => {
         this.snackBar.open("error in Note thrash operation", "OK", { duration: 5000 });
@@ -70,7 +67,7 @@ export class NoteiconComponent implements OnInit {
     [
       { color: "rgb(255, 153, 0)", name: "orange" },
       { color: "rgb(97, 191, 82)", name: "green" },
-       { color: "white", name: "white" },
+      { color: "white", name: "white" },
       { color: " rgb(196,174,251)", name: "purpule" }
 
     ]
