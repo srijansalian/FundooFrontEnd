@@ -41,6 +41,7 @@ import { DisplayemptyComponent } from './component/displayempty/displayempty.com
 import { ArchiveComponent } from './component/archive/archive.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 import { NoteiconComponent } from './component/noteicon/noteicon.component';
+import { SearchnotePipe } from './pipe/searchnote.pipe';
 
 
 
@@ -66,6 +67,8 @@ import { NoteiconComponent } from './component/noteicon/noteicon.component';
     UpdatenotesComponent,
 
     NoteiconComponent,
+
+    SearchnotePipe,
   
 
    

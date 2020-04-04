@@ -30,7 +30,7 @@ export class NoteiconComponent implements OnInit {
       }
     );
   }
-  onClickArchive(archive: boolean, isPinned) {
+  Archive(archive: boolean, isPinned) {
     this.noteService.moveToArchiveNote(this.note.noteid).subscribe((response) => {
       if (this.note.isArchived == true) {
         this.snackBar.open("UnArchived", "OK", { duration: 5000 });
