@@ -2,7 +2,6 @@ import { Component, OnInit,Input} from '@angular/core';
 import { MatTooltip, MatSnackBar, MatDialog } from '@angular/material';
 import { Note } from '../../model/note.model';
 import { NoteService } from '../../service/note.service';
-//import { AmazingTimePickerService } from 'amazing-time-picker';
 
 @Component({
   selector: 'app-noteicon',
@@ -14,9 +13,6 @@ export class NoteiconComponent implements OnInit {
   @Input() note: Note;
   noteId: number;
   isArchive: boolean = false;
-  public selectedTime = '18:33';
-  today: string;
-  isoo: any;
   constructor(private dialog: MatDialog, private noteService: NoteService,  private snackBar: MatSnackBar) {
    
   }
@@ -34,10 +30,9 @@ export class NoteiconComponent implements OnInit {
       }
     );
   }
-
-  onClickArchive(archive: boolean, pin) {
+  onClickArchive(archive: boolean, isPinned) {
     this.noteService.moveToArchiveNote(this.note.noteid).subscribe((response) => {
-      console.log("value::", this.note.isArchived, "pin", this.note.isPinned);
+
       if (this.note.isArchived == true) {
 
         this.snackBar.open("UnArchived", "OK", { duration: 5000 });
