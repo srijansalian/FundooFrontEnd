@@ -1,4 +1,4 @@
-<div style="height: 13em; width: 100%; padding: 0px 0px;margin: 0px 0px;" mat-dialog-content fxLayout="column" fxFlex>
+<div style="height: 13em; width: 37em; padding: 0px 0px;margin: 0px 0px;" mat-dialog-content fxLayout="column" fxFlex>
     <div id="pindiv">
       
     </div>
@@ -10,18 +10,8 @@
         <span>Last Edit:{{note.updatedtime}}</span>
     </div>
     <div class="icon" mat-dialog-actions>
-        <!-- <div>
-            <mat-icon id="create-mat-icon" >notifications</mat-icon>
-            <mat-icon id="create-mat-icon" >person_add</mat-icon>
-            <mat-icon id="create-mat-icon" >color_lens</mat-icon>
-            <mat-icon id="create-mat-icon">archive</mat-icon>
-            <mat-icon id="create-mat-icon">crop_original</mat-icon>
-            <mat-icon id="create-mat-icon" >more_vert</mat-icon>
-            <mat-icon id="create-mat-icon" >undo</mat-icon>
-            <mat-icon id="create-mat-icon" >redo</mat-icon>
-            
-      </div> -->
-        
+  
+  <app-noteicon class="app-note-list sizeof"></app-noteicon>
         <div class="div-button" button (click)="onSubmit()||open=!open"><button
                 style="border: none; padding-right: 45px;">Close</button></div>
     </div>

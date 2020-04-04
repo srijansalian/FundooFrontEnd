@@ -24,8 +24,16 @@ mat-card{
 }
 
 .noteIcon{
+    // display: flex;
+    // justify-content: space-around;
+    // display: flex;
+    // width: 50%;
+    // flex-direction: row;
+    // justify-content: space-around;
     display: flex;
-    justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
     
 }
 .pin {
@@ -34,4 +42,11 @@ mat-card{
     justify-content: flex-end;
     width: 17em;
     visibility: visible;
+  }
+  .app-note-list {
+    display: flex;
+   
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100% auto;
   }

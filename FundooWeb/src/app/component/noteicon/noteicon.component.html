@@ -1,0 +1,49 @@
+
+<div >
+    <a ><img src="assets/icons/remainder.svg" (click)="open(note.id)" matTooltip="Add Reminder"></a>
+</div>
+
+<div >
+    <a (click)="dialogCol()"><img src="assets/icons/collab.svg" matTooltip="Add Collobrate"></a>
+</div>
+
+<div >
+    <a><img src="assets/icons/colourplate.svg" [matMenuTriggerFor]="colorlist" matTooltip="Add Color"></a>
+</div>
+
+<mat-menu #colorlist="matMenu" [overlapTrigger]="false">
+    <ng-template matMenuContent>
+        <div>
+            <div fxLayout="row" fxLayoutGap="10px" style="margin-top: 1px" *ngFor="let colors of arrayOfColors">
+                <div *ngFor="let color of colors">
+                    <button [ngStyle]="{ 'background-color': color.color }" (click)="setColor((color.color))"
+                        matTooltip="{{ color.name }}" mat-mini-fab></button>
+
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</mat-menu>
+
+<div >
+    <a ><img src="assets/icons/addimage.svg" matTooltip="Add Image"></a>
+</div>
+
+<div  >
+   <a (click)="onClickArchive()"> <img src="assets/icons/archive.svg"  matTooltip="Archive"></a>
+</div>
+
+
+<div>
+    <a><img mat-icon-button [matMenuTriggerFor]="menu" style="height: 1.5em; width: 2em;" src="assets/icons/morebutton.svg" (click)="onclicksetNoteid(note.id)"
+            matTooltip="More"></a>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onClickDelete()">Delete Note</button>
+       
+        <button mat-menu-item  (click)="openDialog(note)">Add Label</button>
+        <button mat-menu-item>Add Drawing</button>
+    </mat-menu>
+
+   
+</div>

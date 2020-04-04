@@ -60,6 +60,7 @@ export class DisplaynotesComponent implements OnInit {
               this.others=[];
             //  this.archive=[];
             //  this.trash=[];
+          
               
               this.displayNotes.filter(note=>note.isPinned===false&&note.isArchived===false&&note.isTrashed===false).map(note=>this.others.push(note));
               this.displayNotes.filter(note=>note.isPinned===true&&note.isArchived===false&&note.isTrashed===false).map(note=>this.pined.push(note)); 

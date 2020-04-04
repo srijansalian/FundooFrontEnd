@@ -40,6 +40,7 @@ import { SinglenoteComponent } from './component/singlenote/singlenote.component
 import { DisplayemptyComponent } from './component/displayempty/displayempty.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
+import { NoteiconComponent } from './component/noteicon/noteicon.component';
 
 
 
@@ -63,6 +64,8 @@ import { UpdatenotesComponent } from './component/updatenotes/updatenotes.compon
     ArchiveComponent,
 
     UpdatenotesComponent,
+
+    NoteiconComponent,
   
 
    

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable} from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Note } from '../model/note.model';
@@ -14,10 +14,15 @@ const httpOptions =
   providedIn: 'root'
 })
 export class NoteService {
+  private _autoRefresh$ = new Subject();
   notesApiURL=environment.notesApiURL;
   private token=(localStorage.token)
   private Title=new Subject<any>();
   private httpOptions={headers:new HttpHeaders({'content-type':'application/json'})};
+
+  get autoRefresh$() {
+    return this._autoRefresh$;
+  }
 
   constructor(private httpService:HttpService,private http: HttpClient) { }
 
@@ -49,4 +54,16 @@ export class NoteService {
   moveToTrash(noteId:any){
     return this.httpService.putRequest(this.notesApiURL+environment.trashNote+noteId,{},{headers:new HttpHeaders({'token':localStorage.token})});
   }
+
+  updateNotes(note: any) {
+    return this.httpService.putRequest(this.notesApiURL+environment.updateNote, note, { headers: new HttpHeaders().set('token', sessionStorage.token) });
+  }
+  addColor(noteId,color){
+   
+    return this.httpService.putRequest(`${environment.notesApiURL}/${environment.addcolor}?noteId=${noteId}&color=${color}`,{}, { headers: new HttpHeaders().set('token', sessionStorage.token) });
+  }
+  moveToArchiveNote(noteId: any) {
+    return this.httpService.putRequest(`${environment.notesApiURL}/${environment.archiveNote}?noteId=${noteId}`, {}, { headers: new HttpHeaders().set('token', sessionStorage.token) });
+  }
 }
+
