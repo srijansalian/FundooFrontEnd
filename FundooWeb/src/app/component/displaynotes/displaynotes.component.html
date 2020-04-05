@@ -6,7 +6,7 @@
     <div *ngIf="pined ? pined.length>0:false" >
     
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
-    <div   *ngFor="let item of pined">
+    <div   *ngFor="let item of pined | searchnote:searchnote">
         <app-singlenote [noteDetail]="item" ></app-singlenote>
     </div>
     </div>
@@ -21,7 +21,7 @@
           
     <div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
-        <div   *ngFor="let item of others">
+        <div   *ngFor="let item of others | searchnote:searchnote">
             <app-singlenote [noteDetail]="item" ></app-singlenote>
         </div>
         </div>

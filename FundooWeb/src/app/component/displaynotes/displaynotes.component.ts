@@ -17,6 +17,8 @@ export class DisplaynotesComponent implements OnInit {
   trashedNotes: boolean = false;
   archiveNotes: boolean = false;
   trashEmpty:boolean=false;
+  searchnote:any;
+  searchNotes:boolean;
 
   respo
   pined=new Array<Note>();
@@ -47,6 +49,7 @@ export class DisplaynotesComponent implements OnInit {
          this.displayNote();
          
         }
+        this.getSearchNoteData();
       }
        displayNote(){
         this.trashedNotes = false;
@@ -100,6 +103,16 @@ export class DisplaynotesComponent implements OnInit {
              this.displayNotes.filter(note=>note.isTrashed===true).map(note=>this.others.push(note));
 
           }));
+        }
+        getSearchNoteData(){
+          this.noteservice.getSearchNoteData().subscribe((message)=>{
+            console.log("search data",message.notes);
+              this.searchnote=message.notes;
+              this.searchNotes=true;
+              if(message.notes==""){
+                this.searchNotes=false;
+              }
+          });
         }
              
              

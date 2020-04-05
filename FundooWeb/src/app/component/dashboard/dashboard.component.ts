@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import {NoteService } from 'src/app/service/note.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  @Output() toggleEvent = new EventEmitter<boolean>();
 
-  constructor(private router:Router) { }
+  title: String;
+  description: String;
+
+  constructor(private router:Router,private noteservice: NoteService) { }
 
   ngOnInit() {
   }
@@ -29,6 +34,11 @@ export class DashboardComponent implements OnInit {
   }
   ontrash(){
     this.router.navigate(['dashboard/displaynotes','trash']);
+  }
+
+  searchNote() {
+    console.log();
+    this.noteservice.setSearchNoteData(this.title);
   }
 
 }

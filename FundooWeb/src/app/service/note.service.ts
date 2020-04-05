@@ -15,6 +15,7 @@ const httpOptions =
 })
 export class NoteService {
   private _autoRefresh$ = new Subject();
+  private searchNoteData=new Subject<any>();
   notesApiURL=environment.notesApiURL;
   private token=(localStorage.token)
   private Title=new Subject<any>();
@@ -64,6 +65,12 @@ export class NoteService {
   }
   moveToArchiveNote(noteId: any) {
     return this.httpService.putRequest(`${environment.notesApiURL}/${environment.archiveNote}?noteId=${noteId}`, {}, { headers: new HttpHeaders().set('token', sessionStorage.token) });
+  }
+  setSearchNoteData(message:any){
+    return this.searchNoteData.next({notes:message});
+  }
+  getSearchNoteData():Observable<any>{
+    return this.searchNoteData.asObservable();
   }
 }
 
