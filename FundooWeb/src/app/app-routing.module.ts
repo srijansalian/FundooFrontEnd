@@ -7,9 +7,7 @@ import { ResetpasswordComponent } from './component/resetpassword/resetpassword.
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreatenotesComponent } from './component/createnotes/createnotes.component';
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
-import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
-import { ArchiveComponent } from './component/archive/archive.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 
 
@@ -32,8 +30,6 @@ const routes: Routes = [
   ]},
     {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
-    {path:'pinnednotes',component:PinnednotesComponent},
-    {path:'archive',component:ArchiveComponent},
     {path:'updatenotes',component:UpdatenotesComponent},
    
     

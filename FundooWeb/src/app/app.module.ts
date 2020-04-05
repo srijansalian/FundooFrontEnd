@@ -38,10 +38,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PinnednotesComponent } from './component/pinnednotes/pinnednotes.component';
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 import { DisplayemptyComponent } from './component/displayempty/displayempty.component';
-import { ArchiveComponent } from './component/archive/archive.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 import { NoteiconComponent } from './component/noteicon/noteicon.component';
 import { SearchnotePipe } from './pipe/searchnote.pipe';
+import { LabelComponent } from './component/label/label.component';
 
 
 
@@ -62,13 +62,13 @@ import { SearchnotePipe } from './pipe/searchnote.pipe';
 
     DisplayemptyComponent,
 
-    ArchiveComponent,
-
     UpdatenotesComponent,
 
     NoteiconComponent,
 
     SearchnotePipe,
+
+    LabelComponent,
   
 
    
