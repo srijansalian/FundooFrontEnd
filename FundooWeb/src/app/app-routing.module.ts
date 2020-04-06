@@ -9,6 +9,7 @@ import { CreatenotesComponent } from './component/createnotes/createnotes.compon
 import { DisplaynotesComponent } from './component/displaynotes/displaynotes.component';
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
+import { LabelComponent } from './component/label/label.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
     {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'updatenotes',component:UpdatenotesComponent},
+    {path:'label',component:LabelComponent},
    
     
 ];

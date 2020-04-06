@@ -19,7 +19,7 @@ import {MatCardModule,
   MatTooltipModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSnackBarModule,MatMenuModule,MatDialogModule} from '@angular/material';
+  MatSnackBarModule,MatMenuModule,MatDialogModule,MatCheckboxModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -102,12 +102,7 @@ import { LabelComponent } from './component/label/label.component';
     FlexLayoutModule,
     MatMenuModule,
     MatDialogModule,
-  
-    
-   
-   
-
-    
+    MatCheckboxModule,  
  ],
  exports: [
     MatButtonModule,
