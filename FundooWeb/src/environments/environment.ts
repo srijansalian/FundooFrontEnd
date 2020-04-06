@@ -3,6 +3,7 @@ export const environment = {
 
   userApiURL:'http://localhost:8080/users',
   notesApiURL:'http://localhost:8080/notes',
+  labelApiURL:'http://localhost:8080/labels',
 
   registerURL:'/register',
   loginURL:'/login',
@@ -17,6 +18,11 @@ export const environment = {
   archiveNote:'/archive',
   trashNote:'/delete',
   addcolor:'/changecolor',
+  getlabel:'/getlabel',
+  getalllabels:'/getalllabel',
+  addlabels:'/addlabel',
+  getNotesByLabelId:'/getNotesByLabelId',
+
 
   
   
