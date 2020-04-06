@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { HttpService } from './http.service';
 import { environment } from 'src/environments/environment';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders ,HttpClient } from '@angular/common/http';
+import { Label } from '../model/label.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,12 @@ export class LabelService {
   private labelList=new Subject<any>();
   private labelsNotes=new Subject<any>();
   private noteList=new Subject<any>();
+  private _autoRefresh$ = new Subject();
 
-  constructor(private httpservice: HttpService) { }
+  constructor(private httpservice: HttpService,private http: HttpClient) { }
+  get autoRefresh$() {
+    return this._autoRefresh$;
+  }
 
   getNoteLabels(noteId:any){
     return this.httpservice.getRequest(`${environment.labelApiURL}/${environment.getlabel}?noteId=${noteId}`, { headers: new HttpHeaders().set('token', sessionStorage.token)});
@@ -53,6 +58,18 @@ getNoteList(){
   return this.noteList.asObservable();
 }
 
+setLabelList(message:any){
+  this.labelList.next({label:message});
+}
+getLabelList(){
+return this.labelList.asObservable();
+} 
+private _getLabelUrl:string='/assets/noteinfo/label.json';
+  getAlllab():Observable<Label[]>
+  {
+   return this.http.get<Label[]>(this._getLabelUrl);
+
+  }
 
 
 }

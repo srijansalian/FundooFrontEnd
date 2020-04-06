@@ -15,13 +15,21 @@ export class DashboardComponent implements OnInit {
 
   title: String;
   description: String;
-
+data
   labels: Label[];
   notes:Note[];
+  
+  
 
   constructor(private router:Router,private noteservice: NoteService,private labelservice:LabelService) { }
 
   ngOnInit() {
+    this.labelservice.getAlllab()
+    .subscribe((noteData => {
+      this.data=noteData;
+      this.labels=noteData;
+      console.log(this.labels);
+  }));
   }
 
   signout() {
@@ -61,7 +69,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  onCLickSetLabelId(labelId) {
+SetLabelId(labelId) {
     this.labelservice.getNotesByLabel(labelId).subscribe((data)=>{
           console.log(data);
           this.setlabelNotes(data);
@@ -71,4 +79,15 @@ export class DashboardComponent implements OnInit {
  setlabelNotes(notes){
       this.labelservice.setlabelsNotes(notes);
   }
+  // label(){
+ 
+  //           this.labelservice.getAlllab()
+  //           .subscribe((noteData => {
+  //             this.data=noteData;
+  //             this.labels=noteData;
+  //             console.log(this.labels);
+  //         }));
+  //       }
+
+  
 }

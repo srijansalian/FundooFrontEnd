@@ -64,15 +64,14 @@
                     <span class="label">LABELS</span>
                     <div>
                       <div *ngFor="let label of labels">
-                        <div class="note-div" style="text-decoration:none;">
-                          <span ><img src="assets/icons/label.svg"
-                              style="height: 27px;padding-left: 30px; width: 30px;"  (click)="onCLickSetLabelId(label.labelId)"></span>
-                          <span style=" padding-left: 30px; " (click)="onCLickSetLabelId(label.labelId)">{{label.labelName}}</span>
+                        <div class="LabelDiv" style="text-decoration:none;">
+                          <span ><img src="assets/icons/label.svg" class ="image" (click)="SetLabelId(label.labelId)"></span>
+                          <span style=" padding-left: 30px; " (click)="SetLabelId(label.labelId)">{{label.labelName}}</span>
                         </div>
                       </div>
                         <button mat-raised-button class="navbutton">
                             <mat-icon class ="sidenavIcon">create</mat-icon>
-                           <span class="iconcenter">Edit labels</span>
+                           <span class="iconcenter" (click)="label()">Edit labels</span>
                            </button>
                           
                 </div>

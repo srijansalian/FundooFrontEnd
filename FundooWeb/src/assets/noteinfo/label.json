@@ -1,0 +1,25 @@
+[{
+    "labelId": 1,
+    "labelName": "Distincation",
+    "userId": 3,
+    "noteId": 1
+},
+{
+    "labelId": 2,
+    "labelName": "First Class",
+    "userId": 3,
+    "noteId": 1
+},
+{
+    "labelId": 3,
+    "labelName": "Second Class",
+    "userId": 3,
+    "noteId": 1
+},
+{
+    "labelId": 2,
+    "labelName": "Third Class",
+    "userId": 3,
+    "noteId": 1
+}
+]
