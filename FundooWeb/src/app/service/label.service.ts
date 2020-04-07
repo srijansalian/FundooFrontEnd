@@ -72,6 +72,9 @@ createLabel(label){
 deleteLabel(label){
   return this.httpservice.deleteRequest(`${environment.labelApiURL}/${environment.deletelabel}?labelId=${label}`,{headers:new HttpHeaders().set('token',sessionStorage.token)});
 }
+addLabel(noteId:any,labelId){
+  return this.httpservice.postRequest(`${environment.labelApiURL}/${environment.addLabel}?labelId=${labelId}&noteId=${noteId}`,{},{headers:new HttpHeaders().set('token',sessionStorage.token)});
+}
 private _getLabelUrl:string='/assets/noteinfo/label.json';
   getAlllab():Observable<Label[]>
   {

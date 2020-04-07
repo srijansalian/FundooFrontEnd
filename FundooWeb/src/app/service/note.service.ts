@@ -66,6 +66,7 @@ export class NoteService {
   moveToArchiveNote(noteId: any) {
     return this.httpService.putRequest(`${environment.notesApiURL}/${environment.archiveNote}?noteId=${noteId}`, {}, { headers: new HttpHeaders().set('token', sessionStorage.token) });
   }
+  
   setSearchNoteData(message:any){
     return this.searchNoteData.next({notes:message});
   }

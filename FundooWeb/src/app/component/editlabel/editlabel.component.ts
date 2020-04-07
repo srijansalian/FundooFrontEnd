@@ -31,7 +31,7 @@ export class EditlabelComponent implements OnInit {
       console.log(this.labels);
   }));
   }
-  onClickCreateLabel(InputLabel){
+  CreateLabel(InputLabel){
     let label={
       "labelName":InputLabel
     }
@@ -39,7 +39,7 @@ export class EditlabelComponent implements OnInit {
         this.matSnackBar.open("Label Created","Ok",{duration:3000});
       });
   }
-  onClickDeleteLabel(label){
+  DeleteLabel(label){
     this.labelService.deleteLabel(label).subscribe((response)=>{
       this.matSnackBar.open("Label Deleted","Ok",{duration:3000});
     });

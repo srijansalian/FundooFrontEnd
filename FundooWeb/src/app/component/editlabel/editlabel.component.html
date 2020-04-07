@@ -4,7 +4,7 @@
             <input type="text" class="labelbox" placeholder="Create Label" #labelInput [ngModel]="lname">
         </div>
         <div>
-            <a><img id="img" style="height: 35px; width: 35px; padding-left: 10px;" src="assets/icons/addlabel.png"(click)="onClickCreateLabel(labelInput.value)" matTooltip="Create Label"></a>
+            <a><img id="img" style="height: 35px; width: 35px; padding-left: 10px;" src="assets/icons/addlabel.png"(click)="CreateLabel(labelInput.value)" matTooltip="Create Label"></a>
         </div>
     </div>
     <div class="label-list">
@@ -13,13 +13,12 @@
                 <img id="img" src="assets/icons/label.svg" *ngIf="!changeText" style="height: 20px;margin-left: 0px; width: 20px;">
             </div>
             <div style="display: flex; justify-items: flex-start;" (mouseover)="changeText=true" (mouseout)="changeText=false">
-                <img id="img" class="img-style" *ngIf="changeText" (click)="onClickDeleteLabel(label.labelId)" src="assets/icons/delete.svg" style="height: 20px;margin-left: 0px; width: 20px;"matTooltip="Delete label">
+                <img id="img" class="img-style" *ngIf="changeText" (click)="DeleteLabel(label.labelId)" src="assets/icons/delete.svg" style="height: 20px;margin-left: 0px; width: 20px;"matTooltip="Delete label">
             </div>
            
-            <label mat-menu-item
-                style="display:inline; font-size: large; font-weight: bolder;">{{label.labelName}}</label>
+            <label mat-menu-item  class="menuitem">{{label.labelName}}</label>
             <div class="img-edit">
-                <img  class="img-edit" (click)="OnclickEdit(label.labelId,label.labelName)" src="assets/icons/editimage.svg"
+                <img  class="img-edit" (click)="Edit(label.labelId,label.labelName)" src="assets/icons/editimage.svg"
                     matTooltip="edit label">
             </div>
         </div>

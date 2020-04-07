@@ -2,6 +2,7 @@ import { Component, OnInit,Input} from '@angular/core';
 import { MatTooltip, MatSnackBar, MatDialog } from '@angular/material';
 import { Note } from '../../model/note.model';
 import { NoteService } from '../../service/note.service';
+import {LabelComponent} from '../../component/label/label.component';
 
 @Component({
   selector: 'app-noteicon',
@@ -72,6 +73,14 @@ export class NoteiconComponent implements OnInit {
 
     ]
   ]
+  openLabel(note): void {
+    const dialogRef = this.dialog.open(LabelComponent, {
+      width: '250px', height: 'auto', data: { note }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Close');
+    });
+  }
 }
 
 
