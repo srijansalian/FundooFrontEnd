@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './component/register/register.component';
 import { LoginComponent } from './component/login/login.component';
@@ -10,6 +10,7 @@ import { DisplaynotesComponent } from './component/displaynotes/displaynotes.com
 import { SinglenoteComponent } from './component/singlenote/singlenote.component';
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 import { LabelComponent } from './component/label/label.component';
+import { EditlabelComponent } from './component/editlabel/editlabel.component';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path:'displaynotes',component:DisplaynotesComponent},
     {path:'updatenotes',component:UpdatenotesComponent},
     {path:'label',component:LabelComponent},
+    {path:'editlabel',component:EditlabelComponent},
    
     
 ];

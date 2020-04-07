@@ -72,5 +72,6 @@ export class NoteService {
   getSearchNoteData():Observable<any>{
     return this.searchNoteData.asObservable();
   }
+  
 }
 

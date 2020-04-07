@@ -1,9 +1,11 @@
 import { Component, OnInit ,Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSidenav, MatDialog } from '@angular/material';
 import {NoteService } from 'src/app/service/note.service';
 import {LabelService } from '../../service/label.service';
 import { Note } from '../../model/note.model';
 import { Label } from '../../model/label.model';
+import { EditlabelComponent } from '../../component/editlabel/editlabel.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,7 +23,7 @@ data
   
   
 
-  constructor(private router:Router,private noteservice: NoteService,private labelservice:LabelService) { }
+  constructor(private router:Router,private noteservice: NoteService,private labelservice:LabelService,private dialog: MatDialog) { }
 
   ngOnInit() {
     this.labelservice.getAlllab()
@@ -65,7 +67,7 @@ data
   getNotesList() {
     this.labelservice.getNoteList().subscribe(message => {
       this.notes = message.notes;
-      console.log("side nave notes:", this.notes);
+      
     });
   }
 
@@ -88,6 +90,16 @@ SetLabelId(labelId) {
   //             console.log(this.labels);
   //         }));
   //       }
+  openDialog(labels:Label[]): void {
+    const dialogRef = this.dialog.open(EditlabelComponent,{
+      width: '380px',
+      height: 'auto',
 
+      data: { labels }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
   
 }

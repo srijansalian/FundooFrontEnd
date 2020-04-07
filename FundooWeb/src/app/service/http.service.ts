@@ -15,11 +15,15 @@ export class HttpService {
   public putRequest(url:any,data:any,head:any):any{
     return this.http.put(url,data,head);
   }
-  public deleteRequest(url:any):any{
-    return this.http.delete(url);
+  // public deleteRequest(url:any):any{
+  //   return this.http.delete(url);
     
-  }
+  // }
   public getRequest(url: any, options: any): Observable<any> {
     return this.http.get(url, options);
   }
+  public deleteRequest(url: any, options: any):Observable<any>{
+    return this.http.delete(url, options);
+  }
+  
 }
