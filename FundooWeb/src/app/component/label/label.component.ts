@@ -20,11 +20,17 @@ export class LabelComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,private labelService: LabelService, private matSnackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.labelService.autoRefresh$.subscribe(()=>{
-      this.getAllUserLabel();
-    })
+    // this.labelService.autoRefresh$.subscribe(()=>{
+    //   this.getAllUserLabel();
+    // })
     
-    this.getNoteId();
+    // this.getNoteId();
+    this.labelService.getAlllab()
+    .subscribe((noteData => {
+      this.data=noteData;
+      this.labels=noteData;
+      console.log(this.labels);
+  }));
   }
   getNoteId() {
     this.labelService.getNoteIdForLabel().subscribe(
@@ -47,14 +53,14 @@ export class LabelComponent implements OnInit {
         this.matSnackBar.open("Label Created","Ok",{duration:3000});
       });
   }
-  AddLabel(labelId, noteId) {
-    console.log("mat on checked label called");
+ AddLabel(labelId, noteId) {
     this.labelService.addLabel(this.noteId, labelId).subscribe((data) => {
       this.matSnackBar.open(data.response, "Ok", { duration: 3000 });
     },
       (error) => {
         this.matSnackBar.open("error", "Ok", { duration: 3000 });
       });
-  }
+    }
+    
 
 }
