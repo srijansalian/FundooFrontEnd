@@ -6,7 +6,7 @@
     <div *ngIf="pined ? pined.length>0:false" >
     
     <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
-    <div   *ngFor="let item of pined | searchnote:searchnote">
+    <div   *ngFor="let item of pined | searchnote:searchnote"fxLayout="{{view}}"[fxLayoutAlign]="center" fxFlexOffset="2">
         <app-singlenote [noteDetail]="item" ></app-singlenote>
     </div>
     </div>

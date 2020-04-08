@@ -33,6 +33,9 @@ data
       console.log(this.labels);
   }));
   }
+  onRefresh(){
+    window.location.reload() ;
+  }
 
   signout() {
     localStorage.clear();

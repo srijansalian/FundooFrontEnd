@@ -43,6 +43,7 @@ import { NoteiconComponent } from './component/noteicon/noteicon.component';
 import { SearchnotePipe } from './pipe/searchnote.pipe';
 import { LabelComponent } from './component/label/label.component';
 import { EditlabelComponent } from './component/editlabel/editlabel.component';
+import { SearchlabelPipe } from './pipe/searchlabel.pipe';
 
 
 
@@ -72,6 +73,8 @@ import { EditlabelComponent } from './component/editlabel/editlabel.component';
     LabelComponent,
 
     EditlabelComponent,
+
+    SearchlabelPipe,
   
 
    

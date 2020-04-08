@@ -1,19 +1,18 @@
 <div>
+    <span>Label Notes</span>
     <div class="search-label">
         <div>
         <input type="text" placeholder="Enter Label Name" #labelInput  [ngModel]="lname" >
         </div>
         <div >
-           <a><img  style="height: 40px; width: 40px; padding-left: 10px;" src="assets/icons/addlabel.png"
-            (click)="CreateLabel(labelInput.value)"    matTooltip="Create Label"></a>
+           <a><img  style="height: 35px; width: 35px; padding-left: 10px;" src="assets/icons/addlabel.png"(click)="CreateLabel(labelInput.value)"    matTooltip="Create Label"></a>
         </div>
     </div>
     <div class="label-list">
         <div *ngFor="let label of labels">
             <mat-checkbox></mat-checkbox>
             
-            <label mat-menu-item style="display:inline"
-                (click)="AddLabel(label.labelId,label.noteId)">{{label.labelName}}</label>
+            <label mat-menu-item style="display:inline"(click)="AddLabel(label.labelId,label.noteId)">{{label.labelName}}</label>
         </div>
     </div>
 </div>

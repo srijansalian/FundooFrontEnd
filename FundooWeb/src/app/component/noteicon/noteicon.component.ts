@@ -14,6 +14,9 @@ export class NoteiconComponent implements OnInit {
   @Input() note: Note;
   noteId: number;
   isArchive: boolean = false;
+  reminderTime = null;
+  reminderDate = null;
+  reminderFrequency = null;
   constructor(private dialog: MatDialog, private noteService: NoteService,  private snackBar: MatSnackBar) {
    
   }
@@ -80,6 +83,30 @@ export class NoteiconComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('Close');
     });
+  }
+  reminderAdd(str) {
+    const d = new Date();
+    this.reminderFrequency = null;
+    if (str == 'today') {
+      this.reminderDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+      this.reminderTime = '8:00 PM';
+      console.log(this.reminderDate + ' ' + this.reminderTime);
+      return;
+    }
+    if (str == 'tomorrow') {
+      d.setDate(d.getDate() + 1);
+      this.reminderDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+      this.reminderTime = '8:00 AM';
+      console.log(this.reminderDate + ' ' + this.reminderTime);
+      return;
+    }
+    if (str == 'next') {
+      d.setDate(d.getDate() + (1 + 7 - d.getDay()) % 7);
+      this.reminderDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+      this.reminderTime = '8:00 AM';
+      console.log(this.reminderDate + ' ' + this.reminderTime);
+      return;
+    }
   }
 }
 
