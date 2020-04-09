@@ -3,6 +3,7 @@ import { MatTooltip, MatSnackBar, MatDialog } from '@angular/material';
 import { Note } from '../../model/note.model';
 import { NoteService } from '../../service/note.service';
 import {LabelComponent} from '../../component/label/label.component';
+import{CollaboratorComponent} from '../../component/collaborator/collaborator.component';
 
 @Component({
   selector: 'app-noteicon',
@@ -76,14 +77,7 @@ export class NoteiconComponent implements OnInit {
 
     ]
   ]
-  openLabel(note): void {
-    const dialogRef = this.dialog.open(LabelComponent, {
-      width: '250px', height: 'auto', data: { note }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('Close');
-    });
-  }
+ 
   reminderAdd(str) {
     const d = new Date();
     this.reminderFrequency = null;
@@ -107,6 +101,27 @@ export class NoteiconComponent implements OnInit {
       console.log(this.reminderDate + ' ' + this.reminderTime);
       return;
     }
+  }
+  dialogCol(): void {
+  
+    const dialogRef = this.dialog.open(CollaboratorComponent, {
+      width: '490px',
+      height: '290px',
+
+      panelClass: 'custom-dialog-container',
+      data: { noteId: this.noteId}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+  openLabel(note): void {
+    const dialogRef = this.dialog.open(LabelComponent, {
+      width: '250px', height: 'auto', data: { note }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Close');
+    });
   }
 }
 

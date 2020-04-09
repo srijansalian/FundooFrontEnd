@@ -11,6 +11,7 @@ import { SinglenoteComponent } from './component/singlenote/singlenote.component
 import { UpdatenotesComponent } from './component/updatenotes/updatenotes.component';
 import { LabelComponent } from './component/label/label.component';
 import { EditlabelComponent } from './component/editlabel/editlabel.component';
+import { CollaboratorComponent } from './component/collaborator/collaborator.component';
 
 
 
@@ -35,6 +36,7 @@ const routes: Routes = [
     {path:'updatenotes',component:UpdatenotesComponent},
     {path:'label',component:LabelComponent},
     {path:'editlabel',component:EditlabelComponent},
+    {path:'collaborator',component:CollaboratorComponent},
    
     
 ];

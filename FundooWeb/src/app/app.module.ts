@@ -140,6 +140,13 @@ import { CollaboratorComponent } from './component/collaborator/collaborator.com
    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    UpdatenotesComponent,
+    CollaboratorComponent,
+    LabelComponent,
+    EditlabelComponent
+  ],
+  
 })
 export class AppModule { }
