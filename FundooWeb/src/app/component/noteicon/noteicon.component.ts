@@ -102,7 +102,7 @@ export class NoteiconComponent implements OnInit {
       return;
     }
   }
-  dialogCol(): void {
+  opencol(): void {
   
     const dialogRef = this.dialog.open(CollaboratorComponent, {
       width: '490px',

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
+import { User } from '../../model/user.model';
+import {UserService } from '../../service/user.service';
+
 
 @Component({
   selector: 'app-collaborator',
