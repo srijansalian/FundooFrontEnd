@@ -44,6 +44,7 @@ import { SearchnotePipe } from './pipe/searchnote.pipe';
 import { LabelComponent } from './component/label/label.component';
 import { EditlabelComponent } from './component/editlabel/editlabel.component';
 import { SearchlabelPipe } from './pipe/searchlabel.pipe';
+import { CollaboratorComponent } from './component/collaborator/collaborator.component';
 
 
 
@@ -75,6 +76,8 @@ import { SearchlabelPipe } from './pipe/searchlabel.pipe';
     EditlabelComponent,
 
     SearchlabelPipe,
+
+    CollaboratorComponent,
   
 
    
