@@ -4,6 +4,7 @@ export const environment = {
   userApiURL:'http://localhost:8080/users',
   notesApiURL:'http://localhost:8080/notes',
   labelApiURL:'http://localhost:8080/labels',
+ 
 
   registerURL:'/register',
   loginURL:'/login',
@@ -25,6 +26,10 @@ export const environment = {
   createlabel:'/createlabel',
   deletelabel:'/deletelabel',
   addLabel:'/addLabel',
+  addCollabarator:'/addCollabarator',
+  getCollabarator:'/getCollabarator',
+  removeCollabarator:'/removeCollabarator',
+
 
 
   

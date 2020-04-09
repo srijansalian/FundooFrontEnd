@@ -9,9 +9,11 @@
       </div>
       <div>
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap=2px>
-          <div style="font-size: large; font-weight: bold; padding-bottom: 10px;">{{ownerName}}(owner)</div>
+          <!-- <div style="font-size: large; font-weight: bold; padding-bottom: 10px;">{{ownerName}}(owner)</div> -->
+             <div style="font-size: large; font-weight: bold; padding-bottom: 10px;">Srijan Salian(owner)</div>
         </div>
         <div style="font-size: medium;">{{userName}}</div>
+        <!-- <div style="font-size: medium;">Brijesh</div> -->
       </div>
     </div>
     <div style="width: 82%" *ngFor="let user of users">
@@ -22,9 +24,10 @@
         <div>
           <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap=6px style=" width: 356px;">
             <div style=" padding-left:15px; padding-top: 10px;">{{user.fname}}</div>
-            <div>{{user.lastname}}</div>
+            
           </div>
           <div style=" padding-left:15px; width: 85%;">{{user.email}}</div>
+          
         </div>
         <div><button mat-icon-button>
             <mat-icon (click)="removeColab(user.id)">clear</mat-icon>
