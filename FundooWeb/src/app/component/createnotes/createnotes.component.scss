@@ -1,8 +1,8 @@
 .createnotes{
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 30%;
+    // width: 100%;
+    // height: 30%;
     margin-top: 2%;
     margin-bottom: 4%;
     
@@ -37,7 +37,7 @@
 }
 .matcard1{
     display: flex;
-   // justify-content: center;
+    justify-content: center;
     width: 45%;
     border-radius: 1em;
     height: 12em;
@@ -48,7 +48,7 @@ textarea{
     height: 1.2em;
     margin-bottom: 0px;
     padding: 16px;
-    font-weight: bolder;
+   font-weight: bolder;
     outline: none;
 }
 input:placeholder-shown{
@@ -86,13 +86,15 @@ button{
      text-decoration: none;
      display: flex;
      font-size: 16px;
-     padding: 10px;
-     margin-left: 10%;
+    //  padding: 10px;
+    //  margin-left: 10%;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    // font-weight: bold;
     outline: none;
-margin-top: 20%;
-    padding-right: 45px;
+
+margin-top: 2%;
+
+    // padding-right: 45px;
   }
  
   button:active{
@@ -103,18 +105,45 @@ margin-top: 20%;
     border:none;
     outline: none;
     width: 260%;
+   height: 30px;
 }
 .description{
+    margin-top: 5%;
     resize: none;
     border:none;
     outline: none;
     width: 260%;
+    height: 400%;
+
 
 }
 .app-note-list {
     display: flex;
-   
+   justify-content: space-between;
     flex-direction: row;
-    justify-content: space-around;
+    //justify-content: space-around;
     width: 100% auto;
   }
+.noteicon{
+    margin-top: 3%;
+
+}
+.closebutton{
+    background-color: whitesmoke;
+     border: none;
+     color: black;
+     text-align: center;
+     text-decoration: none;
+     display: flex;
+     font-size: 16px;
+     padding: 10px;
+     margin-left: 83%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    outline: none;
+
+margin-top: 2%;
+
+    padding-right: 0px;
+
+}

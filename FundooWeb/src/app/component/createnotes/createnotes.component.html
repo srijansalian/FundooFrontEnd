@@ -7,14 +7,12 @@
             <mat-icon style="margin-left: 10px;">crop_original</mat-icon>
         </div>
     </mat-card>
+
     <mat-card class="matcard1"  *ngIf="open"  fxLayout="column">        
-        <!-- <textarea id="title"  style="border: none;" [formControl] ="titleFormControl" matInput type="text" class="input" placeholder="Title"></textarea> -->
-        
         <div fxLayout="row wrap" fxLayoutGap="120px">
-        <div>
-            <textarea matInput class="onClickTitle" placeholder="Title" [formControl]="titleFormControl"
-              [style.background-color]="color"></textarea>
-          
+        
+            <textarea matInput class="onClickTitle" placeholder="Title" [formControl]="titleFormControl"[style.background-color]="color"></textarea> 
+           </div>
           <!-- <div *ngIf="!pin">
             <button mat-icon-button style="margin:10px;" (click)="pin=!pin;archive=false">
               <mat-icon class="pin">
@@ -29,14 +27,15 @@
               </mat-icon>
             </button>
             </div> -->
-          </div>
-          </div>
+         
+          
           
             <textarea class="description" style="border: none; "  [formControl] ="descriptionFormControl" matInput type="text" class="input" placeholder="Take a note"></textarea>
-            <div class="icon" > 
-                <div class="button" fxLayout="row wrap" fxLayoutGap="10px">
-                                <div (click)="open=!open">
-                                  <!-- <app-noteicon class="app-note-list sizeof" ></app-noteicon> -->
+           
+            <div  > 
+                <div class="button">
+                                <div class="noteicon">
+                                  <app-noteicon style="display:flex; justify-content: space-between; width: 100%;"></app-noteicon>
                                   
                                     <!-- <div>
                                       <mat-icon id="create-mat-icon" >notifications</mat-icon>
@@ -49,10 +48,13 @@
                                       <mat-icon id="create-mat-icon" >redo</mat-icon>
                                       
                                 </div> -->
+                              </div>
+                                <div (click)="open=!open" class="closebutton" >
                                 <button (click)="onCreateNote()" >Close</button>
+                                </div>
                     
-                    </div>
+                   
                 </div>
             </div> 
-        </mat-card>    
-</div> 
+       </mat-card>
+      </div>  
