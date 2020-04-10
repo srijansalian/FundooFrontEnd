@@ -8,18 +8,18 @@
     "labelId": 2,
     "labelName": "First Class.",
     "userId": 3,
-    "noteId": 1
+    "noteId": 2
 },
 {
     "labelId": 3,
     "labelName": "Second Class",
     "userId": 3,
-    "noteId": 1
+    "noteId": 3
 },
 {
     "labelId": 2,
     "labelName": "Third Class.",
     "userId": 3,
-    "noteId": 1
+    "noteId": 4
 }
 ]

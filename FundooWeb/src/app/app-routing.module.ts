@@ -12,6 +12,7 @@ import { UpdatenotesComponent } from './component/updatenotes/updatenotes.compon
 import { LabelComponent } from './component/label/label.component';
 import { EditlabelComponent } from './component/editlabel/editlabel.component';
 import { CollaboratorComponent } from './component/collaborator/collaborator.component';
+import { ReminderComponent } from './component/reminder/reminder.component';
 
 
 
@@ -30,6 +31,7 @@ const routes: Routes = [
     {path:'',component:DisplaynotesComponent},
    // {path:'displaynotes',component:DisplaynotesComponent},
     {path:'displaynotes/:note',component:DisplaynotesComponent},
+    {path:'reminder',component:ReminderComponent},
   ]},
     {path :'singlenote',component:SinglenoteComponent},
     {path:'displaynotes',component:DisplaynotesComponent},
@@ -37,6 +39,7 @@ const routes: Routes = [
     {path:'label',component:LabelComponent},
     {path:'editlabel',component:EditlabelComponent},
     {path:'collaborator',component:CollaboratorComponent},
+   
    
     
 ];

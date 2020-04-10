@@ -54,6 +54,10 @@ data
   ontrash(){
     this.router.navigate(['dashboard/displaynotes','trash']);
   }
+  remainder(){
+    this.router.navigate(['dashboard','reminder']);
+
+  }
 
   searchNote() {
     console.log();

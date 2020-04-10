@@ -45,6 +45,8 @@ import { LabelComponent } from './component/label/label.component';
 import { EditlabelComponent } from './component/editlabel/editlabel.component';
 import { SearchlabelPipe } from './pipe/searchlabel.pipe';
 import { CollaboratorComponent } from './component/collaborator/collaborator.component';
+import { LabelPipe } from './pipe/label.pipe';
+import { ReminderComponent } from './component/reminder/reminder.component';
 
 
 
@@ -78,6 +80,10 @@ import { CollaboratorComponent } from './component/collaborator/collaborator.com
     SearchlabelPipe,
 
     CollaboratorComponent,
+
+    LabelPipe,
+
+    ReminderComponent,
   
 
    

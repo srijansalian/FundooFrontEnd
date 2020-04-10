@@ -50,3 +50,9 @@ mat-card{
     justify-content: space-around;
     width: 100% auto;
   }
+  .labels{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    
+}

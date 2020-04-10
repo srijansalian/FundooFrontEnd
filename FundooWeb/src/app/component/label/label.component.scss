@@ -11,5 +11,11 @@ input{
     display: list-item;
    // justify-content: center;
    // align-items: flex-end;
-    margin-left: 40px;
+    //margin-left: 40px;
+}
+.labels{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    
 }
