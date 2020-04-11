@@ -156,6 +156,8 @@
         font-family: monospace;
         font-weight: bold;
         line-height: 1.25rem;
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
       }
       .image{
         height: 27px;
@@ -165,4 +167,8 @@
       .mat-icon{
           color: gray;
       }
+      .LabelDiv:hover {
+        //margin: 10px;
+        background-color: lightgrey;
+    }
      

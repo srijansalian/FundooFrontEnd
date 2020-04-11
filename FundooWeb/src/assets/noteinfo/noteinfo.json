@@ -35,7 +35,8 @@
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"blue",
-        "reminder":"Today,8.00Am"
+        "reminder":"Today,8.00Am",
+        "lname":"Second Class."
     },
     {
         "noteid":4,
@@ -47,7 +48,8 @@
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"green",
-        "reminder":""
+        "reminder":"",
+        "lname":"Third Class."
     },
     {
         "noteid":5,

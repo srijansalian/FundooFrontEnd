@@ -90,25 +90,6 @@ export class DisplaynotesComponent implements OnInit {
 
    
             getAllLabelNotes(){
-              // this.labelNotes=true;
-              // this.trashedNotes =false;
-              // this.archiveNotes = false;
-              // this.tempNoteId=this.labelservice.getNoteIdd();
-              // console.log("check label NNoteId",this.tempNoteId);
-              // console.log('hello');
-              // this.noteservice.getAllNotes().subscribe(
-              //       (allNotes:any)=>{
-              //         console.log('hello');
-              //           this.notes=allNotes;
-              //           console.log('Label Notes ',this.noteDetails);
-              //               if (this.notes != undefined) { 
-                              
-              //                 this.displayNotes.filter(note=>note.noteid===this.tempNoteId ).map(note=>this.noteDetails.push(note));
-              //                 console.log('Label Notes ',this.noteDetails);
-              //               }
-              //       }
-              //     )
-
               this.labelNotes=true;
               this.trashedNotes = false;
               this.archiveNotes = false;

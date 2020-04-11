@@ -32,6 +32,9 @@
           
             <textarea class="description" style="border: none; "  [formControl] ="descriptionFormControl" matInput type="text" class="input" placeholder="Take a note"></textarea>
            
+            <div style="margin-bottom: 0.9rem;" class="reminde" *ngIf="reminder">
+              <label style=" background: transparent;background-clip: padding-box; border-radius: 1rem; background-color: rgba(0,0,0,.1);border: solid transparent; padding: 5px ;text-align: center;" >{{date | date:'medium'}}</label>
+          </div>
             <div  > 
                 <div class="button">
                                 <div class="noteicon">
