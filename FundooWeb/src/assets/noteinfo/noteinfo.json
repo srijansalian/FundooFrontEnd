@@ -9,7 +9,7 @@
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"white",
-        "reminder":"",
+        "reminder":"Today,8.00Am",
         "lname":"Distinction."
     },
     {
@@ -35,7 +35,7 @@
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"blue",
-        "reminder":""
+        "reminder":"Today,8.00Am"
     },
     {
         "noteid":4,
@@ -59,7 +59,7 @@
         "createdAt":"9:20:07 AM",
         "updatedAt":"",
         "colour":"yellow",
-        "reminder":""
+        "reminder":"Tomarrow,8.00Pm"
     },
     {
         "noteid":6,
