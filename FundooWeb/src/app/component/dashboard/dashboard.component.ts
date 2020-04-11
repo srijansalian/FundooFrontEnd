@@ -60,6 +60,18 @@ data
     this.router.navigate(['dashboard','reminder']);
 
   }
+  onClickLabel(labelNote){
+    this.labelservice.setNoteIdd(labelNote);
+     this.router.navigate(['dashboard/displaynotes','label']);
+    console.log('Labelll nOet ',labelNote);
+    // this._labelService.getNotesByLabel(labelName).subscribe(
+    //   (response)=>{
+    //     this.setLabelNotes(response);
+    //   }
+    // );
+   
+   
+  }
 
   searchNote() {
     console.log();
@@ -128,5 +140,6 @@ SetLabelId(labelId) {
       console.log('ListView a', this.listview);
     }
   }
+
   
 }

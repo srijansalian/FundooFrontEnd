@@ -10,7 +10,7 @@
         "updatedAt":"",
         "colour":"white",
         "reminder":"",
-        "lname":"Distincation"
+        "lname":"Distinction."
     },
     {
         "noteid":2,
@@ -22,7 +22,8 @@
         "createdAt":"11:55:07 AM",
         "updatedAt":"",
         "colour":"gray",
-        "reminder":""
+        "reminder":"",
+        "lname":"First Class."
     },
     {
         "noteid":3,

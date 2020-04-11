@@ -41,7 +41,7 @@
           </div> -->
 
           <div>
-          <a><img [matMenuTriggerFor]="vertebrates" src="assets/icons/profilepic.jpeg"
+          <a><img [matMenuTriggerFor]="vertebrates" src="assets/icons/propic.jpeg"
             style=" color:grey;height: 30px;width: 30px; padding-left: 2.5em;" /></a>
           </div>
           <div >
@@ -49,7 +49,7 @@
               <div class="div-profilepic">
                 <div class="image-upload">
                   <label for="file-input">
-                    <img src="assets/icons/profilepic.jpeg" style="height: 80px;width: 80px; padding-left: 30px;margin: 0px;"/>
+                    <img src="assets/icons/propic.jpeg" style="height: 80px;width: 80px; padding-left: 30px;margin: 0px;"/>
                   </label>
                   <!-- <input id="file-input" type="file" /> -->
                 </div>
@@ -99,8 +99,8 @@
                     <div>
                       <div *ngFor="let label of labels">
                         <div class="LabelDiv" style="text-decoration:none;">
-                          <span ><img src="assets/icons/label.svg" class ="image" (click)="SetLabelId(label.labelId)"></span>
-                          <span style=" padding-left: 30px; " (click)="SetLabelId(label.labelId)">{{label.labelName}}</span>
+                          <span ><img src="assets/icons/label.svg" class ="image" (click)="onClickLabel(label.labelId)"></span>
+                          <span style=" padding-left: 30px; " (click)="onClickLabel(label.labelId)">{{label.labelName}}</span>
                         </div>
                       </div>
                         <button mat-raised-button class="navbutton" (click)="openDialog()">

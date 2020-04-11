@@ -81,6 +81,14 @@ private _getLabelUrl:string='/assets/noteinfo/label.json';
    return this.http.get<Label[]>(this._getLabelUrl);
 
   }
+  private tempNoteId:number;
+  setNoteIdd(noteid){
+    this.tempNoteId=noteid;
+  }
+
+  getNoteIdd(){
+    return this.tempNoteId;
+  }
 
 
 }
