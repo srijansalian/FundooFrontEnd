@@ -27,7 +27,7 @@
               <mat-icon >refresh</mat-icon>
             </button>
                 </div>
-                <div><button mat-icon-button class="buttonhover">
+                <div><button mat-icon-button class="buttonhover" (click)="gridList()">
             <mat-icon >grid_view</mat-icon>
           </button></div>
                 <div><button mat-icon-button class="buttonhover">
@@ -49,7 +49,7 @@
               <div class="div-profilepic">
                 <div class="image-upload">
                   <label for="file-input">
-                    <img src="assets/icons/profilepic.jpeg" style="height: 110px;width: 110px; padding-left: 90px;margin: 0px;"/>
+                    <img src="assets/icons/profilepic.jpeg" style="height: 80px;width: 80px; padding-left: 30px;margin: 0px;"/>
                   </label>
                   <!-- <input id="file-input" type="file" /> -->
                 </div>
@@ -58,15 +58,15 @@
                 <div>
                 <!-- <h3 style="color: rgb(65, 64, 64);">{{name}}</h3>
                 <h4 style="color: rgb(71, 82, 94);">{{uName}}</h4> -->
-                <h3 >Srijan Salian</h3>
-                <h2>srijansalian@gmail.com</h2>
+                <h4 >Srijan Salian</h4>
+                <h5>srijansalian@gmail.com</h5>
 
                 </div>
               </div>
         
               <div class="div-profile">
                 <div class="div-signout">
-                  <button [routerLink]="['']" (click)="onClickClear()" mat-button class="signout-button">Signout</button>
+                  <button  mat-raised-button  (click)="signout()">Sign Out</button>
                 </div>
               </div>
             </mat-menu>

@@ -19,6 +19,7 @@ export class NoteService {
   notesApiURL=environment.notesApiURL;
   private token=(localStorage.token)
   private Title=new Subject<any>();
+  private view=new Subject<any>();
   private httpOptions={headers:new HttpHeaders({'content-type':'application/json'})};
 
   get autoRefresh$() {
@@ -73,6 +74,18 @@ export class NoteService {
   getSearchNoteData():Observable<any>{
     return this.searchNoteData.asObservable();
   }
+  setView(data:any){
+    console.log('Service set ');
+    
+   this.view.next({view:data});
+   console.log('data ',this.view);
+   
+ }
+
+ getView():Observable<any>{
+   console.log('Service get');
+   return this.view.asObservable();
+ }
   
 }
 

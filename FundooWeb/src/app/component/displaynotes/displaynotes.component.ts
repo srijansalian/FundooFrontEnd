@@ -47,9 +47,11 @@ export class DisplaynotesComponent implements OnInit {
         else
         {
          this.displayNote();
+         this.getView();
          
         }
         this.getSearchNoteData();
+        
       }
        displayNote(){
         this.trashedNotes = false;
@@ -113,6 +115,16 @@ export class DisplaynotesComponent implements OnInit {
                 this.searchNotes=false;
               }
           });
+        }
+        view:string;
+        getView(){
+          this.noteservice.getView().subscribe(
+            (response:any)=>{
+                     this.view=response.view;
+                 }
+          );
+          console.log('View ',this.view);
+          
         }
              
              

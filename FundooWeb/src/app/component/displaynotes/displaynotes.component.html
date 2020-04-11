@@ -5,8 +5,8 @@
 <div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap" >
     <div *ngIf="pined ? pined.length>0:false" >
     
-    <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
-    <div   *ngFor="let item of pined | searchnote:searchnote"fxLayout="{{view}}"[fxLayoutAlign]="center" fxFlexOffset="2">
+    <div  fxLayoutGap="10px" fxLayout="{{view}} wrap">
+    <div   *ngFor="let item of pined | searchnote:searchnote"[fxLayoutAlign]="center" fxFlexOffset="2">
         <app-singlenote [noteDetail]="item" ></app-singlenote>
     </div>
     </div>
@@ -19,8 +19,8 @@
         <div *ngIf="trashedNotes">
             <div class="label">TRASHED</div></div>
           
-    <div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap" >
-    <div fxLayout="{{rowGrid}} wrap" fxLayoutGap="10px" >
+    <div id="container"  >
+    <div  fxLayoutGap="10px"  fxLayout="{{view}} wrap" >
         <div   *ngFor="let item of others | searchnote:searchnote">
             <app-singlenote [noteDetail]="item" ></app-singlenote>
         </div>

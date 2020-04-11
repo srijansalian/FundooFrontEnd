@@ -20,6 +20,8 @@ export class DashboardComponent implements OnInit {
 data
   labels: Label[];
   notes:Note[];
+  listview:boolean=false;
+  view:string;
   
   
 
@@ -107,6 +109,24 @@ SetLabelId(labelId) {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+  gridList(){
+    if(this.listview){
+      console.log('inside view row');
+      
+      this.view="row";
+      this.noteservice.setView(this.view);
+      this.listview=!this.listview;
+      console.log('ListView ', this.listview);
+    }
+    else{
+      console.log('ListView b ', this.listview);
+      console.log('inside view col');
+      this.view="column";
+      this.noteservice.setView(this.view);
+      this.listview=!this.listview;
+      console.log('ListView a', this.listview);
+    }
   }
   
 }
