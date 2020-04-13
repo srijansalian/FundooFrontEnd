@@ -2,8 +2,14 @@
   <app-createnotes></app-createnotes>
 </div>
 
-<!-- <div style="margin:65px;" fxLayout="row" fxLayoutWrap fxLayoutGap="16px" fxLayout="center center">
-  <div *ngFor="let record of records | myfilter : 'reminder'">
-    <app-template [archiveIcon]="archiveIcon" (refresher)="refresh()" [record]="record"></app-template>
-  </div>
-</div> -->
+
+<div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap"  >
+    <div  >
+    
+    <div  fxLayoutGap="10px" fxLayout="{{view}} wrap">
+    <div   *ngFor="let item of others | searchnote:searchnote"[fxLayoutAlign]="center" fxFlexOffset="2">
+        <div *ngIf=item.reminder>
+        <app-singlenote [noteDetail]="item" ></app-singlenote></div>
+    </div>
+    </div>
+    </div></div>
