@@ -28,7 +28,7 @@
             </div>
 
             <div style="margin-bottom: 0.9rem;" class="reminder" *ngIf="noteDetail.reminder">
-                <label style=" background: transparent;background-clip: padding-box; border-radius: 1rem; background-color: rgba(0,0,0,.1);border: solid transparent; padding: 5px ;text-align: center;" >{{noteDetail.reminder}}</label>
+                <label style=" background: transparent;background-clip: padding-box; border-radius: 1rem; background-color: rgba(0,0,0,.1);border: solid transparent; padding: 5px ;text-align: center;" [matMenuTriggerFor]="customdate">{{noteDetail.reminder}}</label>
             </div>
 
             <div class="labels" >
@@ -81,3 +81,48 @@
         </mat-card>
     </div>
 </div>
+<mat-menu #customdate="matMenu">
+    <div style="margin-left: 50px;">
+      <mat-form-field (click)="$event.stopPropagation();">
+        <input matInput (dateChange)="addEvent('change', $event)" [matDatepicker]="picker" placeholder="Choose a date" name="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field (click)="$event.stopPropagation();">
+        <mat-select placeholder="Time" name="time" [(ngModel)]="reminderTime">
+          <mat-option value="8:00 AM">
+            Morning 8:00 AM
+          </mat-option>
+          <mat-option value="1:00 PM">
+            Afternoon 1:00 PM
+          </mat-option>
+          <mat-option value="6:00 PM">
+            Evening 6:00 PM
+          </mat-option>
+          <mat-option value="8:00 PM">
+            Night 8:00 PM
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field (click)="$event.stopPropagation();">
+        <mat-select placeholder="Repeat" name="repeat" [(ngModel)]="reminderFrequency">
+          <mat-option value="Does not repeat">
+            Does not repeat
+          </mat-option>
+          <mat-option value="Daily">
+            Daily
+          </mat-option>
+          <mat-option value="Weekly">
+            Weekly
+          </mat-option>
+          <mat-option value="Monthly">
+            Monthly
+          </mat-option>
+          <mat-option value="Yearly">
+            Yearly
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button style="margin-left: 65%" mat-button (click)="addReminder(record.noteId)">Save</button>
+  </mat-menu>
