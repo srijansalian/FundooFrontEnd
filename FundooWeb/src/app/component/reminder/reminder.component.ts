@@ -35,6 +35,7 @@ export class ReminderComponent implements OnInit {
 
   ngOnInit() {
    this.displayNote();
+   this.getView();
   }
   displayNote(){
     this.trashedNotes = false;
@@ -60,6 +61,16 @@ export class ReminderComponent implements OnInit {
           //  console.log(this.pined);e
 
          }));
+        }
+        view:string;
+        getView(){
+          this.noteservice.getView().subscribe(
+            (response:any)=>{
+                     this.view=response.view;
+                 }
+          );
+          console.log('View ',this.view);
+          
         }
 
 }

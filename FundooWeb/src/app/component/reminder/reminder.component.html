@@ -3,13 +3,11 @@
 </div>
 
 
-<div id="container"  fxLayout="column wrap" fxLayout.xs="coloum wrap"  >
-    <div  >
-    
-    <div  fxLayoutGap="10px" fxLayout="{{view}} wrap">
-    <div   *ngFor="let item of others | searchnote:searchnote"[fxLayoutAlign]="center" fxFlexOffset="2">
+<div id="container">
+    <div fxLayout="row wrap">
+    <div   *ngFor="let item of others | searchnote:searchnote">
         <div *ngIf=item.reminder>
         <app-singlenote [noteDetail]="item" ></app-singlenote></div>
     </div>
     </div>
-    </div></div>
+    </div>
